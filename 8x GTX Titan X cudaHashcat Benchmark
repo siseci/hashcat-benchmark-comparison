@@ -1,0 +1,2702 @@
+Source: https://gist.github.com/epixoip/63c2ad11baf7bbd57544
+
+## 8x GTX Titan X cudaHashcat Benchmark
+
+**Product:** [Sagitta Brutalis Titan X (PN S3480-GTX-TITANX)](https://sagitta.systems/hardware/gpu-compute-nodes/brutalis/)
+
+**Software:** cudaHashcat 1.36, ForceWare 346.59
+
+**Accelerator:** 8x Nvidia GTX Titan X reference design
+
+
+#### Highlights
+
+1. World's fastest 8-GPU system!
+2. First single system to break 300 GH/s on NTLM
+3. First single system to break 150 GH/s on MD5
+4. Also, let's take a moment to ponder 133 KH/s on bcrypt(05)
+5. GPU temperatures stable at 63-67C in 23C ambient environment
+6. Not much else to say... numbers speak for themselves :)
+
+
+### Benchmarks
+
+#### +200 Mhz Clock Offset (Sagitta HPC default)
+```
+cudaHashcat v1.36 starting in benchmark-mode...
+
+Device #1: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #2: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #3: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #4: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #5: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #6: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #7: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #8: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+
+Hashtype: MD4
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 39049.8 MH/s
+Speed.GPU.#2.: 38785.2 MH/s
+Speed.GPU.#3.: 38950.2 MH/s
+Speed.GPU.#4.: 39105.2 MH/s
+Speed.GPU.#5.: 38688.1 MH/s
+Speed.GPU.#6.: 39638.6 MH/s
+Speed.GPU.#7.: 38688.3 MH/s
+Speed.GPU.#8.: 39456.9 MH/s
+Speed.GPU.#*.:   312.4 GH/s
+
+Hashtype: MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 18639.7 MH/s
+Speed.GPU.#2.: 18661.2 MH/s
+Speed.GPU.#3.: 18661.3 MH/s
+Speed.GPU.#4.: 18722.3 MH/s
+Speed.GPU.#5.: 18797.5 MH/s
+Speed.GPU.#6.: 18990.0 MH/s
+Speed.GPU.#7.: 18905.3 MH/s
+Speed.GPU.#8.: 18919.2 MH/s
+Speed.GPU.#*.:   150.3 GH/s
+
+Hashtype: SHA1
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  6112.1 MH/s
+Speed.GPU.#2.:  6069.4 MH/s
+Speed.GPU.#3.:  6116.7 MH/s
+Speed.GPU.#4.:  6119.8 MH/s
+Speed.GPU.#5.:  6101.0 MH/s
+Speed.GPU.#6.:  6183.3 MH/s
+Speed.GPU.#7.:  6034.5 MH/s
+Speed.GPU.#8.:  6130.3 MH/s
+Speed.GPU.#*.: 48867.2 MH/s
+
+Hashtype: SHA256
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2421.7 MH/s
+Speed.GPU.#2.:  2393.0 MH/s
+Speed.GPU.#3.:  2424.5 MH/s
+Speed.GPU.#4.:  2419.5 MH/s
+Speed.GPU.#5.:  2386.3 MH/s
+Speed.GPU.#6.:  2465.2 MH/s
+Speed.GPU.#7.:  2393.7 MH/s
+Speed.GPU.#8.:  2441.2 MH/s
+Speed.GPU.#*.: 19345.2 MH/s
+
+Hashtype: SHA384
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   744.2 MH/s
+Speed.GPU.#2.:   742.8 MH/s
+Speed.GPU.#3.:   740.9 MH/s
+Speed.GPU.#4.:   743.5 MH/s
+Speed.GPU.#5.:   740.4 MH/s
+Speed.GPU.#6.:   760.2 MH/s
+Speed.GPU.#7.:   736.9 MH/s
+Speed.GPU.#8.:   755.1 MH/s
+Speed.GPU.#*.:  5964.0 MH/s
+
+Hashtype: SHA512
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   732.5 MH/s
+Speed.GPU.#2.:   735.0 MH/s
+Speed.GPU.#3.:   735.0 MH/s
+Speed.GPU.#4.:   734.4 MH/s
+Speed.GPU.#5.:   734.7 MH/s
+Speed.GPU.#6.:   750.1 MH/s
+Speed.GPU.#7.:   730.4 MH/s
+Speed.GPU.#8.:   746.1 MH/s
+Speed.GPU.#*.:  5898.1 MH/s
+
+Hashtype: SHA-3(Keccak)
+Workload: 128 loops, 256 accel
+
+Speed.GPU.#1.:   517.5 MH/s
+Speed.GPU.#2.:   516.2 MH/s
+Speed.GPU.#3.:   517.9 MH/s
+Speed.GPU.#4.:   517.0 MH/s
+Speed.GPU.#5.:   514.5 MH/s
+Speed.GPU.#6.:   526.1 MH/s
+Speed.GPU.#7.:   515.0 MH/s
+Speed.GPU.#8.:   525.5 MH/s
+Speed.GPU.#*.:  4149.7 MH/s
+
+Hashtype: RipeMD160
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  3925.5 MH/s
+Speed.GPU.#2.:  3911.1 MH/s
+Speed.GPU.#3.:  3916.4 MH/s
+Speed.GPU.#4.:  3930.6 MH/s
+Speed.GPU.#5.:  3920.3 MH/s
+Speed.GPU.#6.:  3992.2 MH/s
+Speed.GPU.#7.:  3903.1 MH/s
+Speed.GPU.#8.:  3984.8 MH/s
+Speed.GPU.#*.: 31484.0 MH/s
+
+Hashtype: Whirlpool
+Workload: 512 loops, 32 accel
+
+Speed.GPU.#1.:   162.1 MH/s
+Speed.GPU.#2.:   160.1 MH/s
+Speed.GPU.#3.:   161.9 MH/s
+Speed.GPU.#4.:   162.9 MH/s
+Speed.GPU.#5.:   160.2 MH/s
+Speed.GPU.#6.:   164.2 MH/s
+Speed.GPU.#7.:   159.6 MH/s
+Speed.GPU.#8.:   163.1 MH/s
+Speed.GPU.#*.:  1294.3 MH/s
+
+Hashtype: GOST R 34.11-94
+Workload: 512 loops, 64 accel
+
+Speed.GPU.#1.:   226.9 MH/s
+Speed.GPU.#2.:   224.5 MH/s
+Speed.GPU.#3.:   226.5 MH/s
+Speed.GPU.#4.:   226.6 MH/s
+Speed.GPU.#5.:   226.3 MH/s
+Speed.GPU.#6.:   228.8 MH/s
+Speed.GPU.#7.:   223.4 MH/s
+Speed.GPU.#8.:   227.8 MH/s
+Speed.GPU.#*.:  1810.7 MH/s
+
+Hashtype: SAP CODVN B (BCODE)
+Workload: 1024 loops, 64 accel
+
+Speed.GPU.#1.:  1397.8 MH/s
+Speed.GPU.#2.:  1397.5 MH/s
+Speed.GPU.#3.:  1399.1 MH/s
+Speed.GPU.#4.:  1401.0 MH/s
+Speed.GPU.#5.:  1391.3 MH/s
+Speed.GPU.#6.:  1424.9 MH/s
+Speed.GPU.#7.:  1387.6 MH/s
+Speed.GPU.#8.:  1416.5 MH/s
+Speed.GPU.#*.: 11215.7 MH/s
+
+Hashtype: SAP CODVN F/G (PASSCODE)
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   641.2 MH/s
+Speed.GPU.#2.:   642.4 MH/s
+Speed.GPU.#3.:   642.8 MH/s
+Speed.GPU.#4.:   639.7 MH/s
+Speed.GPU.#5.:   644.3 MH/s
+Speed.GPU.#6.:   635.1 MH/s
+Speed.GPU.#7.:   645.9 MH/s
+Speed.GPU.#8.:   636.7 MH/s
+Speed.GPU.#*.:  5128.1 MH/s
+
+Hashtype: SAP CODVN H (PWDSALTEDHASH) iSSHA-1
+Workload: 1024 loops, 16 accel
+
+Speed.GPU.#1.:  4569.5 kH/s
+Speed.GPU.#2.:  4560.5 kH/s
+Speed.GPU.#3.:  4578.9 kH/s
+Speed.GPU.#4.:  4559.6 kH/s
+Speed.GPU.#5.:  4544.4 kH/s
+Speed.GPU.#6.:  4644.9 kH/s
+Speed.GPU.#7.:  4551.2 kH/s
+Speed.GPU.#8.:  4646.4 kH/s
+Speed.GPU.#*.: 36655.4 kH/s
+
+Hashtype: Lotus Notes/Domino 5
+Workload: 256 loops, 32 accel
+
+Speed.GPU.#1.:   204.3 MH/s
+Speed.GPU.#2.:   202.4 MH/s
+Speed.GPU.#3.:   204.4 MH/s
+Speed.GPU.#4.:   204.3 MH/s
+Speed.GPU.#5.:   200.9 MH/s
+Speed.GPU.#6.:   206.6 MH/s
+Speed.GPU.#7.:   203.1 MH/s
+Speed.GPU.#8.:   205.7 MH/s
+Speed.GPU.#*.:  1631.6 MH/s
+
+Hashtype: Lotus Notes/Domino 6
+Workload: 256 loops, 32 accel
+
+Speed.GPU.#1.: 66556.2 kH/s
+Speed.GPU.#2.: 65456.2 kH/s
+Speed.GPU.#3.: 66579.1 kH/s
+Speed.GPU.#4.: 66485.3 kH/s
+Speed.GPU.#5.: 65918.8 kH/s
+Speed.GPU.#6.: 66695.5 kH/s
+Speed.GPU.#7.: 66070.8 kH/s
+Speed.GPU.#8.: 66908.9 kH/s
+Speed.GPU.#*.:   530.7 MH/s
+
+Hashtype: Lotus Notes/Domino 8
+Workload: 1024 loops, 64 accel
+
+Speed.GPU.#1.:   509.9 kH/s
+Speed.GPU.#2.:   513.3 kH/s
+Speed.GPU.#3.:   509.4 kH/s
+Speed.GPU.#4.:   510.6 kH/s
+Speed.GPU.#5.:   512.8 kH/s
+Speed.GPU.#6.:   524.0 kH/s
+Speed.GPU.#7.:   508.2 kH/s
+Speed.GPU.#8.:   518.4 kH/s
+Speed.GPU.#*.:  4106.7 kH/s
+
+Hashtype: SHA-1(Base64), nsldap, Netscape LDAP SHA
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  6135.9 MH/s
+Speed.GPU.#2.:  6014.7 MH/s
+Speed.GPU.#3.:  6169.5 MH/s
+Speed.GPU.#4.:  6154.3 MH/s
+Speed.GPU.#5.:  6038.4 MH/s
+Speed.GPU.#6.:  6172.2 MH/s
+Speed.GPU.#7.:  6099.9 MH/s
+Speed.GPU.#8.:  6197.6 MH/s
+Speed.GPU.#*.: 48982.4 MH/s
+
+Hashtype: SSHA-1(Base64), nsldaps, Netscape LDAP SSHA
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  6138.4 MH/s
+Speed.GPU.#2.:  6054.6 MH/s
+Speed.GPU.#3.:  6155.1 MH/s
+Speed.GPU.#4.:  6091.9 MH/s
+Speed.GPU.#5.:  6063.8 MH/s
+Speed.GPU.#6.:  6202.8 MH/s
+Speed.GPU.#7.:  5989.1 MH/s
+Speed.GPU.#8.:  6125.7 MH/s
+Speed.GPU.#*.: 48821.4 MH/s
+
+Hashtype: descrypt, DES(Unix), Traditional DES
+Workload: 128 loops, 64 accel
+
+Speed.GPU.#1.:   164.6 MH/s
+Speed.GPU.#2.:   161.7 MH/s
+Speed.GPU.#3.:   165.1 MH/s
+Speed.GPU.#4.:   164.3 MH/s
+Speed.GPU.#5.:   161.8 MH/s
+Speed.GPU.#6.:   166.4 MH/s
+Speed.GPU.#7.:   163.7 MH/s
+Speed.GPU.#8.:   166.3 MH/s
+Speed.GPU.#*.:  1313.9 MH/s
+
+Hashtype: md5crypt, MD5(Unix), FreeBSD MD5, Cisco-IOS MD5
+Workload: 1000 loops, 32 accel
+
+Speed.GPU.#1.:  7960.2 kH/s
+Speed.GPU.#2.:  7947.9 kH/s
+Speed.GPU.#3.:  7958.7 kH/s
+Speed.GPU.#4.:  7948.9 kH/s
+Speed.GPU.#5.:  7971.8 kH/s
+Speed.GPU.#6.:  8158.4 kH/s
+Speed.GPU.#7.:  7948.3 kH/s
+Speed.GPU.#8.:  8103.3 kH/s
+Speed.GPU.#*.: 63997.4 kH/s
+
+Hashtype: sha256crypt, SHA256(Unix)
+Workload: 1024 loops, 4 accel
+
+Speed.GPU.#1.:   354.2 kH/s
+Speed.GPU.#2.:   352.0 kH/s
+Speed.GPU.#3.:   355.3 kH/s
+Speed.GPU.#4.:   355.8 kH/s
+Speed.GPU.#5.:   352.6 kH/s
+Speed.GPU.#6.:   361.8 kH/s
+Speed.GPU.#7.:   353.0 kH/s
+Speed.GPU.#8.:   360.0 kH/s
+Speed.GPU.#*.:  2844.6 kH/s
+
+Hashtype: sha512crypt, SHA512(Unix)
+Workload: 1024 loops, 8 accel
+
+Speed.GPU.#1.:   128.0 kH/s
+Speed.GPU.#2.:   124.5 kH/s
+Speed.GPU.#3.:   127.7 kH/s
+Speed.GPU.#4.:   127.1 kH/s
+Speed.GPU.#5.:   125.5 kH/s
+Speed.GPU.#6.:   128.0 kH/s
+Speed.GPU.#7.:   127.5 kH/s
+Speed.GPU.#8.:   129.1 kH/s
+Speed.GPU.#*.:  1017.3 kH/s
+
+Hashtype: bcrypt, Blowfish(OpenBSD)
+Workload: 32 loops, 2 accel
+
+Speed.GPU.#1.:    16701 H/s
+Speed.GPU.#2.:    16455 H/s
+Speed.GPU.#3.:    16657 H/s
+Speed.GPU.#4.:    16668 H/s
+Speed.GPU.#5.:    16424 H/s
+Speed.GPU.#6.:    16843 H/s
+Speed.GPU.#7.:    16557 H/s
+Speed.GPU.#8.:    16759 H/s
+Speed.GPU.#*.:   133.1 kH/s
+
+Hashtype: LM
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2449.7 MH/s
+Speed.GPU.#2.:  2408.7 MH/s
+Speed.GPU.#3.:  2443.2 MH/s
+Speed.GPU.#4.:  2446.6 MH/s
+Speed.GPU.#5.:  2407.4 MH/s
+Speed.GPU.#6.:  2475.6 MH/s
+Speed.GPU.#7.:  2421.7 MH/s
+Speed.GPU.#8.:  2472.3 MH/s
+Speed.GPU.#*.: 19525.2 MH/s
+
+Hashtype: NTLM
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 38642.7 MH/s
+Speed.GPU.#2.: 38897.5 MH/s
+Speed.GPU.#3.: 38747.3 MH/s
+Speed.GPU.#4.: 38807.5 MH/s
+Speed.GPU.#5.: 38900.8 MH/s
+Speed.GPU.#6.: 39671.6 MH/s
+Speed.GPU.#7.: 38552.5 MH/s
+Speed.GPU.#8.: 39338.2 MH/s
+Speed.GPU.#*.:   311.6 GH/s
+
+Hashtype: DCC, mscash
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 10471.6 MH/s
+Speed.GPU.#2.: 10418.9 MH/s
+Speed.GPU.#3.: 10455.3 MH/s
+Speed.GPU.#4.: 10541.1 MH/s
+Speed.GPU.#5.: 10421.2 MH/s
+Speed.GPU.#6.: 10640.5 MH/s
+Speed.GPU.#7.: 10386.3 MH/s
+Speed.GPU.#8.: 10609.0 MH/s
+Speed.GPU.#*.: 83943.8 MH/s
+
+Hashtype: NetNTLMv1-VANILLA / NetNTLMv1+ESS
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 16386.6 MH/s
+Speed.GPU.#2.: 16199.7 MH/s
+Speed.GPU.#3.: 16420.7 MH/s
+Speed.GPU.#4.: 16278.5 MH/s
+Speed.GPU.#5.: 16228.0 MH/s
+Speed.GPU.#6.: 16565.9 MH/s
+Speed.GPU.#7.: 16091.1 MH/s
+Speed.GPU.#8.: 16502.3 MH/s
+Speed.GPU.#*.:   130.7 GH/s
+
+Hashtype: NetNTLMv2
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  1230.9 MH/s
+Speed.GPU.#2.:  1221.7 MH/s
+Speed.GPU.#3.:  1223.3 MH/s
+Speed.GPU.#4.:  1248.9 MH/s
+Speed.GPU.#5.:  1217.8 MH/s
+Speed.GPU.#6.:  1249.0 MH/s
+Speed.GPU.#7.:  1218.8 MH/s
+Speed.GPU.#8.:  1235.2 MH/s
+Speed.GPU.#*.:  9845.7 MH/s
+
+Hashtype: Kerberos 5 AS-REQ Pre-Auth etype 23
+Workload: 256 loops, 32 accel
+
+Speed.GPU.#1.:   211.8 MH/s
+Speed.GPU.#2.:   210.4 MH/s
+Speed.GPU.#3.:   212.0 MH/s
+Speed.GPU.#4.:   211.2 MH/s
+Speed.GPU.#5.:   209.9 MH/s
+Speed.GPU.#6.:   214.2 MH/s
+Speed.GPU.#7.:   208.2 MH/s
+Speed.GPU.#8.:   214.0 MH/s
+Speed.GPU.#*.:  1691.6 MH/s
+
+Hashtype: EPiServer 6.x < v4
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  4424.6 MH/s
+Speed.GPU.#2.:  4392.6 MH/s
+Speed.GPU.#3.:  4429.1 MH/s
+Speed.GPU.#4.:  4447.4 MH/s
+Speed.GPU.#5.:  4390.0 MH/s
+Speed.GPU.#6.:  4472.6 MH/s
+Speed.GPU.#7.:  4349.0 MH/s
+Speed.GPU.#8.:  4466.2 MH/s
+Speed.GPU.#*.: 35371.5 MH/s
+
+Hashtype: EPiServer 6.x > v4
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  2224.4 MH/s
+Speed.GPU.#2.:  2204.4 MH/s
+Speed.GPU.#3.:  2226.2 MH/s
+Speed.GPU.#4.:  2200.9 MH/s
+Speed.GPU.#5.:  2207.5 MH/s
+Speed.GPU.#6.:  2257.8 MH/s
+Speed.GPU.#7.:  2193.9 MH/s
+Speed.GPU.#8.:  2246.9 MH/s
+Speed.GPU.#*.: 17762.0 MH/s
+
+Hashtype: MSSQL(2000)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  6239.7 MH/s
+Speed.GPU.#2.:  6176.5 MH/s
+Speed.GPU.#3.:  6237.3 MH/s
+Speed.GPU.#4.:  6280.8 MH/s
+Speed.GPU.#5.:  6170.2 MH/s
+Speed.GPU.#6.:  6279.0 MH/s
+Speed.GPU.#7.:  6149.8 MH/s
+Speed.GPU.#8.:  6246.1 MH/s
+Speed.GPU.#*.: 49779.4 MH/s
+
+Hashtype: MSSQL(2005)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  6273.2 MH/s
+Speed.GPU.#2.:  6195.9 MH/s
+Speed.GPU.#3.:  6280.1 MH/s
+Speed.GPU.#4.:  6245.3 MH/s
+Speed.GPU.#5.:  6217.1 MH/s
+Speed.GPU.#6.:  6359.5 MH/s
+Speed.GPU.#7.:  6169.9 MH/s
+Speed.GPU.#8.:  6321.9 MH/s
+Speed.GPU.#*.: 50062.8 MH/s
+
+Hashtype: MSSQL(2012)
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   743.7 MH/s
+Speed.GPU.#2.:   740.1 MH/s
+Speed.GPU.#3.:   742.3 MH/s
+Speed.GPU.#4.:   743.5 MH/s
+Speed.GPU.#5.:   739.0 MH/s
+Speed.GPU.#6.:   752.9 MH/s
+Speed.GPU.#7.:   740.3 MH/s
+Speed.GPU.#8.:   753.6 MH/s
+Speed.GPU.#*.:  5955.4 MH/s
+
+Hashtype: MySQL323
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.: 42080.1 MH/s
+Speed.GPU.#2.: 42071.8 MH/s
+Speed.GPU.#3.: 42103.1 MH/s
+Speed.GPU.#4.: 42185.8 MH/s
+Speed.GPU.#5.: 41849.7 MH/s
+Speed.GPU.#6.: 43000.1 MH/s
+Speed.GPU.#7.: 41932.1 MH/s
+Speed.GPU.#8.: 42745.7 MH/s
+Speed.GPU.#*.:   338.0 GH/s
+
+Hashtype: MySQL4.1/MySQL5
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  2826.2 MH/s
+Speed.GPU.#2.:  2818.5 MH/s
+Speed.GPU.#3.:  2827.3 MH/s
+Speed.GPU.#4.:  2827.6 MH/s
+Speed.GPU.#5.:  2805.2 MH/s
+Speed.GPU.#6.:  2865.4 MH/s
+Speed.GPU.#7.:  2798.3 MH/s
+Speed.GPU.#8.:  2880.8 MH/s
+Speed.GPU.#*.: 22649.4 MH/s
+
+Hashtype: Oracle 7-10g
+Workload: 512 loops, 64 accel
+
+Speed.GPU.#1.:   694.1 MH/s
+Speed.GPU.#2.:   685.1 MH/s
+Speed.GPU.#3.:   692.8 MH/s
+Speed.GPU.#4.:   700.7 MH/s
+Speed.GPU.#5.:   685.3 MH/s
+Speed.GPU.#6.:   702.2 MH/s
+Speed.GPU.#7.:   688.6 MH/s
+Speed.GPU.#8.:   697.3 MH/s
+Speed.GPU.#*.:  5546.1 MH/s
+
+Hashtype: Sybase ASE
+Workload: 512 loops, 32 accel
+
+Speed.GPU.#1.:   218.7 MH/s
+Speed.GPU.#2.:   216.0 MH/s
+Speed.GPU.#3.:   219.0 MH/s
+Speed.GPU.#4.:   217.3 MH/s
+Speed.GPU.#5.:   216.3 MH/s
+Speed.GPU.#6.:   222.0 MH/s
+Speed.GPU.#7.:   217.1 MH/s
+Speed.GPU.#8.:   221.8 MH/s
+Speed.GPU.#*.:  1748.3 MH/s
+
+Hashtype: Oracle 11g/12c
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  6100.1 MH/s
+Speed.GPU.#2.:  6043.1 MH/s
+Speed.GPU.#3.:  6134.8 MH/s
+Speed.GPU.#4.:  6101.0 MH/s
+Speed.GPU.#5.:  6054.4 MH/s
+Speed.GPU.#6.:  6141.4 MH/s
+Speed.GPU.#7.:  6060.3 MH/s
+Speed.GPU.#8.:  6133.0 MH/s
+Speed.GPU.#*.: 48768.1 MH/s
+
+Hashtype: PostgreSQL Challenge-Response Authentication (MD5)
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  4795.0 MH/s
+Speed.GPU.#2.:  4741.7 MH/s
+Speed.GPU.#3.:  4798.0 MH/s
+Speed.GPU.#4.:  4757.6 MH/s
+Speed.GPU.#5.:  4750.5 MH/s
+Speed.GPU.#6.:  4886.1 MH/s
+Speed.GPU.#7.:  4717.5 MH/s
+Speed.GPU.#8.:  4837.4 MH/s
+Speed.GPU.#*.: 38283.9 MH/s
+
+Hashtype: MySQL Challenge-Response Authentication (SHA1)
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  1750.6 MH/s
+Speed.GPU.#2.:  1748.8 MH/s
+Speed.GPU.#3.:  1754.0 MH/s
+Speed.GPU.#4.:  1757.5 MH/s
+Speed.GPU.#5.:  1743.9 MH/s
+Speed.GPU.#6.:  1787.5 MH/s
+Speed.GPU.#7.:  1742.3 MH/s
+Speed.GPU.#8.:  1778.7 MH/s
+Speed.GPU.#*.: 14063.3 MH/s
+
+Hashtype: OSX v10.4, v10.5, v10.6
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  4423.8 MH/s
+Speed.GPU.#2.:  4372.8 MH/s
+Speed.GPU.#3.:  4427.8 MH/s
+Speed.GPU.#4.:  4443.7 MH/s
+Speed.GPU.#5.:  4376.1 MH/s
+Speed.GPU.#6.:  4475.7 MH/s
+Speed.GPU.#7.:  4366.5 MH/s
+Speed.GPU.#8.:  4440.8 MH/s
+Speed.GPU.#*.: 35327.2 MH/s
+
+Hashtype: OSX v10.7
+Workload: 128 loops, 256 accel
+
+Speed.GPU.#1.:   739.1 MH/s
+Speed.GPU.#2.:   739.2 MH/s
+Speed.GPU.#3.:   738.5 MH/s
+Speed.GPU.#4.:   733.2 MH/s
+Speed.GPU.#5.:   740.1 MH/s
+Speed.GPU.#6.:   754.1 MH/s
+Speed.GPU.#7.:   724.2 MH/s
+Speed.GPU.#8.:   752.3 MH/s
+Speed.GPU.#*.:  5920.7 MH/s
+
+Hashtype: OSX v10.8+
+Workload: 1024 loops, 2 accel
+
+Speed.GPU.#1.:     9129 H/s
+Speed.GPU.#2.:     9044 H/s
+Speed.GPU.#3.:     9065 H/s
+Speed.GPU.#4.:     9228 H/s
+Speed.GPU.#5.:     8973 H/s
+Speed.GPU.#6.:     9344 H/s
+Speed.GPU.#7.:     9200 H/s
+Speed.GPU.#8.:     9182 H/s
+Speed.GPU.#*.:    73165 H/s
+
+Hashtype: Android PIN
+Workload: 1024 loops, 16 accel
+
+Speed.GPU.#1.:  4621.1 kH/s
+Speed.GPU.#2.:  4605.9 kH/s
+Speed.GPU.#3.:  4624.5 kH/s
+Speed.GPU.#4.:  4617.3 kH/s
+Speed.GPU.#5.:  4591.8 kH/s
+Speed.GPU.#6.:  4691.7 kH/s
+Speed.GPU.#7.:  4588.7 kH/s
+Speed.GPU.#8.:  4696.6 kH/s
+Speed.GPU.#*.: 37037.6 kH/s
+
+Hashtype: Android FDE <= 4.3
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   636.8 kH/s
+Speed.GPU.#2.:   636.6 kH/s
+Speed.GPU.#3.:   636.9 kH/s
+Speed.GPU.#4.:   639.4 kH/s
+Speed.GPU.#5.:   637.0 kH/s
+Speed.GPU.#6.:   651.2 kH/s
+Speed.GPU.#7.:   634.0 kH/s
+Speed.GPU.#8.:   645.9 kH/s
+Speed.GPU.#*.:  5117.8 kH/s
+
+Hashtype: scrypt
+Workload: 1 loops, 64 accel
+
+Speed.GPU.#1.:   148.5 kH/s
+Speed.GPU.#2.:   150.3 kH/s
+Speed.GPU.#3.:   138.7 kH/s
+Speed.GPU.#4.:   148.7 kH/s
+Speed.GPU.#5.:   154.3 kH/s
+Speed.GPU.#6.:   156.2 kH/s
+Speed.GPU.#7.:   150.7 kH/s
+Speed.GPU.#8.:   144.8 kH/s
+Speed.GPU.#*.:  1192.3 kH/s
+
+Hashtype: Cisco-PIX MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 11857.5 MH/s
+Speed.GPU.#2.: 11793.0 MH/s
+Speed.GPU.#3.: 11833.9 MH/s
+Speed.GPU.#4.: 11814.6 MH/s
+Speed.GPU.#5.: 11811.5 MH/s
+Speed.GPU.#6.: 12025.8 MH/s
+Speed.GPU.#7.: 11683.8 MH/s
+Speed.GPU.#8.: 12025.3 MH/s
+Speed.GPU.#*.: 94845.4 MH/s
+
+Hashtype: Cisco-ASA MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 12224.5 MH/s
+Speed.GPU.#2.: 12225.7 MH/s
+Speed.GPU.#3.: 12256.6 MH/s
+Speed.GPU.#4.: 12277.9 MH/s
+Speed.GPU.#5.: 12221.4 MH/s
+Speed.GPU.#6.: 12478.4 MH/s
+Speed.GPU.#7.: 12192.9 MH/s
+Speed.GPU.#8.: 12346.0 MH/s
+Speed.GPU.#*.: 98223.6 MH/s
+
+Hashtype: Cisco-IOS SHA256
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2404.4 MH/s
+Speed.GPU.#2.:  2376.9 MH/s
+Speed.GPU.#3.:  2407.3 MH/s
+Speed.GPU.#4.:  2403.1 MH/s
+Speed.GPU.#5.:  2400.6 MH/s
+Speed.GPU.#6.:  2464.7 MH/s
+Speed.GPU.#7.:  2380.8 MH/s
+Speed.GPU.#8.:  2432.0 MH/s
+Speed.GPU.#*.: 19269.8 MH/s
+
+Hashtype: Cisco $8$
+Workload: 1024 loops, 8 accel
+
+Speed.GPU.#1.:    53703 H/s
+Speed.GPU.#2.:    52861 H/s
+Speed.GPU.#3.:    53698 H/s
+Speed.GPU.#4.:    53607 H/s
+Speed.GPU.#5.:    52760 H/s
+Speed.GPU.#6.:    54158 H/s
+Speed.GPU.#7.:    53499 H/s
+Speed.GPU.#8.:    54223 H/s
+Speed.GPU.#*.:   428.5 kH/s
+
+Hashtype: Cisco $9$
+Workload: 1 loops, 4 accel
+
+Speed.GPU.#1.:     4965 H/s
+Speed.GPU.#2.:     4941 H/s
+Speed.GPU.#3.:     4974 H/s
+Speed.GPU.#4.:     4917 H/s
+Speed.GPU.#5.:     4938 H/s
+Speed.GPU.#6.:     4994 H/s
+Speed.GPU.#7.:     4899 H/s
+Speed.GPU.#8.:     5002 H/s
+Speed.GPU.#*.:    39630 H/s
+
+Hashtype: Juniper IVE
+Workload: 1000 loops, 32 accel
+
+Speed.GPU.#1.:  7981.2 kH/s
+Speed.GPU.#2.:  7908.4 kH/s
+Speed.GPU.#3.:  7969.6 kH/s
+Speed.GPU.#4.:  8017.5 kH/s
+Speed.GPU.#5.:  7929.7 kH/s
+Speed.GPU.#6.:  8073.6 kH/s
+Speed.GPU.#7.:  7976.6 kH/s
+Speed.GPU.#8.:  8095.2 kH/s
+Speed.GPU.#*.: 63952.0 kH/s
+
+Hashtype: Citrix NetScaler
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  5557.7 MH/s
+Speed.GPU.#2.:  5539.8 MH/s
+Speed.GPU.#3.:  5561.0 MH/s
+Speed.GPU.#4.:  5551.7 MH/s
+Speed.GPU.#5.:  5533.8 MH/s
+Speed.GPU.#6.:  5677.7 MH/s
+Speed.GPU.#7.:  5518.9 MH/s
+Speed.GPU.#8.:  5646.5 MH/s
+Speed.GPU.#*.: 44587.1 MH/s
+
+Hashtype: DNSSEC (NSEC3)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  2617.8 MH/s
+Speed.GPU.#2.:  2600.0 MH/s
+Speed.GPU.#3.:  2615.6 MH/s
+Speed.GPU.#4.:  2634.6 MH/s
+Speed.GPU.#5.:  2585.5 MH/s
+Speed.GPU.#6.:  2648.8 MH/s
+Speed.GPU.#7.:  2615.2 MH/s
+Speed.GPU.#8.:  2651.7 MH/s
+Speed.GPU.#*.: 20969.1 MH/s
+
+Hashtype: WPA/WPA2
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   314.7 kH/s
+Speed.GPU.#2.:   314.2 kH/s
+Speed.GPU.#3.:   314.6 kH/s
+Speed.GPU.#4.:   313.9 kH/s
+Speed.GPU.#5.:   314.6 kH/s
+Speed.GPU.#6.:   321.6 kH/s
+Speed.GPU.#7.:   312.8 kH/s
+Speed.GPU.#8.:   319.4 kH/s
+Speed.GPU.#*.:  2526.0 kH/s
+
+Hashtype: IKE-PSK MD5
+Workload: 512 loops, 128 accel
+
+Speed.GPU.#1.:  1343.7 MH/s
+Speed.GPU.#2.:  1339.7 MH/s
+Speed.GPU.#3.:  1348.6 MH/s
+Speed.GPU.#4.:  1362.0 MH/s
+Speed.GPU.#5.:  1337.1 MH/s
+Speed.GPU.#6.:  1363.7 MH/s
+Speed.GPU.#7.:  1348.1 MH/s
+Speed.GPU.#8.:  1367.5 MH/s
+Speed.GPU.#*.: 10810.5 MH/s
+
+Hashtype: IKE-PSK SHA1
+Workload: 512 loops, 128 accel
+
+Speed.GPU.#1.:   457.3 MH/s
+Speed.GPU.#2.:   452.4 MH/s
+Speed.GPU.#3.:   457.1 MH/s
+Speed.GPU.#4.:   454.7 MH/s
+Speed.GPU.#5.:   452.3 MH/s
+Speed.GPU.#6.:   463.6 MH/s
+Speed.GPU.#7.:   447.9 MH/s
+Speed.GPU.#8.:   460.2 MH/s
+Speed.GPU.#*.:  3645.6 MH/s
+
+Hashtype: Password Safe v2
+Workload: 1000 loops, 16 accel
+
+Speed.GPU.#1.:   238.9 kH/s
+Speed.GPU.#2.:   235.6 kH/s
+Speed.GPU.#3.:   238.7 kH/s
+Speed.GPU.#4.:   239.0 kH/s
+Speed.GPU.#5.:   235.1 kH/s
+Speed.GPU.#6.:   240.8 kH/s
+Speed.GPU.#7.:   234.4 kH/s
+Speed.GPU.#8.:   239.8 kH/s
+Speed.GPU.#*.:  1902.4 kH/s
+
+Hashtype: Password Safe v3
+Workload: 1024 loops, 16 accel
+
+Speed.GPU.#1.:  1053.1 kH/s
+Speed.GPU.#2.:  1039.9 kH/s
+Speed.GPU.#3.:  1054.0 kH/s
+Speed.GPU.#4.:  1046.8 kH/s
+Speed.GPU.#5.:  1041.4 kH/s
+Speed.GPU.#6.:  1072.4 kH/s
+Speed.GPU.#7.:  1038.7 kH/s
+Speed.GPU.#8.:  1064.7 kH/s
+Speed.GPU.#*.:  8411.0 kH/s
+
+Hashtype: 1Password, agilekeychain
+Workload: 1000 loops, 64 accel
+
+Speed.GPU.#1.:  2529.3 kH/s
+Speed.GPU.#2.:  2525.7 kH/s
+Speed.GPU.#3.:  2527.7 kH/s
+Speed.GPU.#4.:  2533.2 kH/s
+Speed.GPU.#5.:  2525.0 kH/s
+Speed.GPU.#6.:  2578.8 kH/s
+Speed.GPU.#7.:  2514.8 kH/s
+Speed.GPU.#8.:  2563.1 kH/s
+Speed.GPU.#*.: 20297.6 kH/s
+
+Hashtype: 1Password, cloudkeychain
+Workload: 1024 loops, 2 accel
+
+Speed.GPU.#1.:     7962 H/s
+Speed.GPU.#2.:     7773 H/s
+Speed.GPU.#3.:     8013 H/s
+Speed.GPU.#4.:     8132 H/s
+Speed.GPU.#5.:     7886 H/s
+Speed.GPU.#6.:     8214 H/s
+Speed.GPU.#7.:     8113 H/s
+Speed.GPU.#8.:     8115 H/s
+Speed.GPU.#*.:    64207 H/s
+
+Hashtype: AIX {ssha1}
+Workload: 64 loops, 128 accel
+
+Speed.GPU.#1.: 31546.7 kH/s
+Speed.GPU.#2.: 31396.3 kH/s
+Speed.GPU.#3.: 31539.6 kH/s
+Speed.GPU.#4.: 31526.7 kH/s
+Speed.GPU.#5.: 31343.2 kH/s
+Speed.GPU.#6.: 32014.3 kH/s
+Speed.GPU.#7.: 31410.6 kH/s
+Speed.GPU.#8.: 31847.4 kH/s
+Speed.GPU.#*.:   252.6 MH/s
+
+Hashtype: TrueCrypt 5.0+ PBKDF2-HMAC-RipeMD160 + AES
+Workload: 1024 loops, 64 accel
+
+Speed.GPU.#1.:   915.6 kH/s
+Speed.GPU.#2.:   916.8 kH/s
+Speed.GPU.#3.:   916.9 kH/s
+Speed.GPU.#4.:   923.4 kH/s
+Speed.GPU.#5.:   915.8 kH/s
+Speed.GPU.#6.:   932.1 kH/s
+Speed.GPU.#7.:   914.2 kH/s
+Speed.GPU.#8.:   931.7 kH/s
+Speed.GPU.#*.:  7366.5 kH/s
+
+Hashtype: TrueCrypt 5.0+ PBKDF2-HMAC-SHA512 + AES
+Workload: 1000 loops, 16 accel
+
+Speed.GPU.#1.:   334.5 kH/s
+Speed.GPU.#2.:   335.8 kH/s
+Speed.GPU.#3.:   337.0 kH/s
+Speed.GPU.#4.:   327.1 kH/s
+Speed.GPU.#5.:   335.3 kH/s
+Speed.GPU.#6.:   343.8 kH/s
+Speed.GPU.#7.:   329.6 kH/s
+Speed.GPU.#8.:   343.7 kH/s
+Speed.GPU.#*.:  2686.8 kH/s
+
+Hashtype: TrueCrypt 5.0+ PBKDF2-HMAC-Whirlpool + AES
+Workload: 1000 loops, 8 accel
+
+Speed.GPU.#1.:    34877 H/s
+Speed.GPU.#2.:    34503 H/s
+Speed.GPU.#3.:    34836 H/s
+Speed.GPU.#4.:    34926 H/s
+Speed.GPU.#5.:    34444 H/s
+Speed.GPU.#6.:    35313 H/s
+Speed.GPU.#7.:    34674 H/s
+Speed.GPU.#8.:    35120 H/s
+Speed.GPU.#*.:   278.7 kH/s
+
+Hashtype: TrueCrypt 5.0+ PBKDF2-HMAC-RipeMD160 + AES + boot-mode
+Workload: 1000 loops, 64 accel
+
+Speed.GPU.#1.:  1813.1 kH/s
+Speed.GPU.#2.:  1804.0 kH/s
+Speed.GPU.#3.:  1809.8 kH/s
+Speed.GPU.#4.:  1820.5 kH/s
+Speed.GPU.#5.:  1803.3 kH/s
+Speed.GPU.#6.:  1837.7 kH/s
+Speed.GPU.#7.:  1794.3 kH/s
+Speed.GPU.#8.:  1833.6 kH/s
+Speed.GPU.#*.: 14516.2 kH/s
+
+Hashtype: Office 2007
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   105.9 kH/s
+Speed.GPU.#2.:   105.8 kH/s
+Speed.GPU.#3.:   106.3 kH/s
+Speed.GPU.#4.:   105.0 kH/s
+Speed.GPU.#5.:   105.5 kH/s
+Speed.GPU.#6.:   107.8 kH/s
+Speed.GPU.#7.:   105.3 kH/s
+Speed.GPU.#8.:   107.7 kH/s
+Speed.GPU.#*.:   849.3 kH/s
+
+Hashtype: Office 2010
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:    53069 H/s
+Speed.GPU.#2.:    53003 H/s
+Speed.GPU.#3.:    53232 H/s
+Speed.GPU.#4.:    52975 H/s
+Speed.GPU.#5.:    52853 H/s
+Speed.GPU.#6.:    53675 H/s
+Speed.GPU.#7.:    52736 H/s
+Speed.GPU.#8.:    54000 H/s
+Speed.GPU.#*.:   425.5 kH/s
+
+Hashtype: Office 2013
+Workload: 1024 loops, 4 accel
+
+Speed.GPU.#1.:     7527 H/s
+Speed.GPU.#2.:     7559 H/s
+Speed.GPU.#3.:     7594 H/s
+Speed.GPU.#4.:     7588 H/s
+Speed.GPU.#5.:     7557 H/s
+Speed.GPU.#6.:     7763 H/s
+Speed.GPU.#7.:     7502 H/s
+Speed.GPU.#8.:     7686 H/s
+Speed.GPU.#*.:    60776 H/s
+
+Hashtype: MS Office <= 2003 MD5 + RC4, oldoffice$0, oldoffice$1
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   194.2 MH/s
+Speed.GPU.#2.:   193.1 MH/s
+Speed.GPU.#3.:   195.0 MH/s
+Speed.GPU.#4.:   193.7 MH/s
+Speed.GPU.#5.:   192.3 MH/s
+Speed.GPU.#6.:   196.9 MH/s
+Speed.GPU.#7.:   192.8 MH/s
+Speed.GPU.#8.:   196.2 MH/s
+Speed.GPU.#*.:  1554.2 MH/s
+
+Hashtype: MS Office <= 2003 SHA1 + RC4, oldoffice$3, oldoffice$4
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   272.6 MH/s
+Speed.GPU.#2.:   270.2 MH/s
+Speed.GPU.#3.:   272.7 MH/s
+Speed.GPU.#4.:   273.5 MH/s
+Speed.GPU.#5.:   270.0 MH/s
+Speed.GPU.#6.:   273.7 MH/s
+Speed.GPU.#7.:   267.7 MH/s
+Speed.GPU.#8.:   274.4 MH/s
+Speed.GPU.#*.:  2174.7 MH/s
+
+Hashtype: PDF 1.1 - 1.3 (Acrobat 2 - 4)
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   296.2 MH/s
+Speed.GPU.#2.:   294.5 MH/s
+Speed.GPU.#3.:   296.4 MH/s
+Speed.GPU.#4.:   298.8 MH/s
+Speed.GPU.#5.:   293.5 MH/s
+Speed.GPU.#6.:   301.8 MH/s
+Speed.GPU.#7.:   291.2 MH/s
+Speed.GPU.#8.:   298.8 MH/s
+Speed.GPU.#*.:  2371.1 MH/s
+
+Hashtype: PDF 1.1 - 1.3 (Acrobat 2 - 4) + collider-mode #1
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   336.2 MH/s
+Speed.GPU.#2.:   333.5 MH/s
+Speed.GPU.#3.:   336.5 MH/s
+Speed.GPU.#4.:   335.4 MH/s
+Speed.GPU.#5.:   332.8 MH/s
+Speed.GPU.#6.:   339.6 MH/s
+Speed.GPU.#7.:   330.2 MH/s
+Speed.GPU.#8.:   338.6 MH/s
+Speed.GPU.#*.:  2683.0 MH/s
+
+Hashtype: PDF 1.1 - 1.3 (Acrobat 2 - 4) + collider-mode #2
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:  2987.0 MH/s
+Speed.GPU.#2.:  2971.9 MH/s
+Speed.GPU.#3.:  2983.0 MH/s
+Speed.GPU.#4.:  2991.2 MH/s
+Speed.GPU.#5.:  2976.1 MH/s
+Speed.GPU.#6.:  3023.2 MH/s
+Speed.GPU.#7.:  2963.7 MH/s
+Speed.GPU.#8.:  3021.1 MH/s
+Speed.GPU.#*.: 23917.2 MH/s
+
+Hashtype: PDF 1.4 - 1.6 (Acrobat 5 - 8)
+Workload: 70 loops, 256 accel
+
+Speed.GPU.#1.: 14086.3 kH/s
+Speed.GPU.#2.: 13993.0 kH/s
+Speed.GPU.#3.: 14079.0 kH/s
+Speed.GPU.#4.: 14136.8 kH/s
+Speed.GPU.#5.: 13955.9 kH/s
+Speed.GPU.#6.: 14226.1 kH/s
+Speed.GPU.#7.: 13850.8 kH/s
+Speed.GPU.#8.: 14182.0 kH/s
+Speed.GPU.#*.:   112.5 MH/s
+
+Hashtype: PDF 1.7 Level 3 (Acrobat 9)
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2420.8 MH/s
+Speed.GPU.#2.:  2394.2 MH/s
+Speed.GPU.#3.:  2423.2 MH/s
+Speed.GPU.#4.:  2403.3 MH/s
+Speed.GPU.#5.:  2398.3 MH/s
+Speed.GPU.#6.:  2450.6 MH/s
+Speed.GPU.#7.:  2394.5 MH/s
+Speed.GPU.#8.:  2445.1 MH/s
+Speed.GPU.#*.: 19330.0 MH/s
+
+Hashtype: PDF 1.7 Level 8 (Acrobat 10 - 11)
+Workload: 64 loops, 8 accel
+
+Speed.GPU.#1.:        0 H/s
+Speed.GPU.#2.:        0 H/s
+Speed.GPU.#3.:        0 H/s
+Speed.GPU.#4.:        0 H/s
+Speed.GPU.#5.:        0 H/s
+Speed.GPU.#6.:        0 H/s
+Speed.GPU.#7.:        0 H/s
+Speed.GPU.#8.:        0 H/s
+Speed.GPU.#*.:        0 H/s
+
+Hashtype: Drupal7
+Workload: 1024 loops, 8 accel
+
+Speed.GPU.#1.:    45186 H/s
+Speed.GPU.#2.:    45014 H/s
+Speed.GPU.#3.:    45187 H/s
+Speed.GPU.#4.:    45092 H/s
+Speed.GPU.#5.:    45122 H/s
+Speed.GPU.#6.:    45700 H/s
+Speed.GPU.#7.:    44939 H/s
+Speed.GPU.#8.:    45815 H/s
+Speed.GPU.#*.:   362.1 kH/s
+
+Hashtype: HMAC-MD5 (key = $pass)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  1915.3 MH/s
+Speed.GPU.#2.:  1896.6 MH/s
+Speed.GPU.#3.:  1916.6 MH/s
+Speed.GPU.#4.:  1940.1 MH/s
+Speed.GPU.#5.:  1901.5 MH/s
+Speed.GPU.#6.:  1956.4 MH/s
+Speed.GPU.#7.:  1884.4 MH/s
+Speed.GPU.#8.:  1928.4 MH/s
+Speed.GPU.#*.: 15339.2 MH/s
+
+Hashtype: HMAC-MD5 (key = $salt)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  5308.5 MH/s
+Speed.GPU.#2.:  5298.5 MH/s
+Speed.GPU.#3.:  5285.2 MH/s
+Speed.GPU.#4.:  5200.0 MH/s
+Speed.GPU.#5.:  5299.0 MH/s
+Speed.GPU.#6.:  5279.4 MH/s
+Speed.GPU.#7.:  5278.3 MH/s
+Speed.GPU.#8.:  5446.3 MH/s
+Speed.GPU.#*.: 42395.2 MH/s
+
+Hashtype: HMAC-SHA1 (key = $pass)
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   416.6 MH/s
+Speed.GPU.#2.:   413.8 MH/s
+Speed.GPU.#3.:   416.7 MH/s
+Speed.GPU.#4.:   416.5 MH/s
+Speed.GPU.#5.:   413.0 MH/s
+Speed.GPU.#6.:   422.7 MH/s
+Speed.GPU.#7.:   409.0 MH/s
+Speed.GPU.#8.:   418.4 MH/s
+Speed.GPU.#*.:  3326.6 MH/s
+
+Hashtype: HMAC-SHA1 (key = $salt)
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   661.1 MH/s
+Speed.GPU.#2.:   655.2 MH/s
+Speed.GPU.#3.:   661.8 MH/s
+Speed.GPU.#4.:   645.0 MH/s
+Speed.GPU.#5.:   654.2 MH/s
+Speed.GPU.#6.:   667.5 MH/s
+Speed.GPU.#7.:   641.9 MH/s
+Speed.GPU.#8.:   661.7 MH/s
+Speed.GPU.#*.:  5248.3 MH/s
+
+Hashtype: HMAC-SHA256 (key = $pass)
+Workload: 128 loops, 128 accel
+
+Speed.GPU.#1.:   463.0 MH/s
+Speed.GPU.#2.:   458.7 MH/s
+Speed.GPU.#3.:   464.2 MH/s
+Speed.GPU.#4.:   456.3 MH/s
+Speed.GPU.#5.:   458.2 MH/s
+Speed.GPU.#6.:   464.1 MH/s
+Speed.GPU.#7.:   456.0 MH/s
+Speed.GPU.#8.:   466.9 MH/s
+Speed.GPU.#*.:  3687.4 MH/s
+
+Hashtype: HMAC-SHA256 (key = $salt)
+Workload: 128 loops, 128 accel
+
+Speed.GPU.#1.:  1028.9 MH/s
+Speed.GPU.#2.:  1017.2 MH/s
+Speed.GPU.#3.:  1027.8 MH/s
+Speed.GPU.#4.:  1038.5 MH/s
+Speed.GPU.#5.:  1020.2 MH/s
+Speed.GPU.#6.:  1059.7 MH/s
+Speed.GPU.#7.:  1021.5 MH/s
+Speed.GPU.#8.:  1040.5 MH/s
+Speed.GPU.#*.:  8254.2 MH/s
+
+Hashtype: HMAC-SHA512 (key = $pass)
+Workload: 128 loops, 128 accel
+
+Speed.GPU.#1.:   101.7 MH/s
+Speed.GPU.#2.:   100.7 MH/s
+Speed.GPU.#3.:   101.7 MH/s
+Speed.GPU.#4.:   101.1 MH/s
+Speed.GPU.#5.:   100.4 MH/s
+Speed.GPU.#6.:   102.1 MH/s
+Speed.GPU.#7.:   100.1 MH/s
+Speed.GPU.#8.:   101.9 MH/s
+Speed.GPU.#*.:   809.7 MH/s
+
+Hashtype: HMAC-SHA512 (key = $salt)
+Workload: 128 loops, 128 accel
+
+Speed.GPU.#1.:   233.9 MH/s
+Speed.GPU.#2.:   232.0 MH/s
+Speed.GPU.#3.:   235.1 MH/s
+Speed.GPU.#4.:   236.8 MH/s
+Speed.GPU.#5.:   232.5 MH/s
+Speed.GPU.#6.:   239.1 MH/s
+Speed.GPU.#7.:   231.2 MH/s
+Speed.GPU.#8.:   236.2 MH/s
+Speed.GPU.#*.:  1876.8 MH/s
+
+Hashtype: IPMI2 RAKP HMAC-SHA1
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:  1251.9 MH/s
+Speed.GPU.#2.:  1241.8 MH/s
+Speed.GPU.#3.:  1254.4 MH/s
+Speed.GPU.#4.:  1245.5 MH/s
+Speed.GPU.#5.:  1241.3 MH/s
+Speed.GPU.#6.:  1260.6 MH/s
+Speed.GPU.#7.:  1243.3 MH/s
+Speed.GPU.#8.:  1274.7 MH/s
+Speed.GPU.#*.: 10013.5 MH/s
+
+Hashtype: Half MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 11591.2 MH/s
+Speed.GPU.#2.: 11564.8 MH/s
+Speed.GPU.#3.: 11578.3 MH/s
+Speed.GPU.#4.: 11684.4 MH/s
+Speed.GPU.#5.: 11586.9 MH/s
+Speed.GPU.#6.: 11857.7 MH/s
+Speed.GPU.#7.: 11483.6 MH/s
+Speed.GPU.#8.: 11762.0 MH/s
+Speed.GPU.#*.: 93109.0 MH/s
+
+Hashtype: Double MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  5253.0 MH/s
+Speed.GPU.#2.:  5258.4 MH/s
+Speed.GPU.#3.:  5252.5 MH/s
+Speed.GPU.#4.:  5252.3 MH/s
+Speed.GPU.#5.:  5241.2 MH/s
+Speed.GPU.#6.:  5365.3 MH/s
+Speed.GPU.#7.:  5206.5 MH/s
+Speed.GPU.#8.:  5341.6 MH/s
+Speed.GPU.#*.: 42170.9 MH/s
+
+Hashtype: GRUB 2
+Workload: 1024 loops, 2 accel
+
+Speed.GPU.#1.:    32446 H/s
+Speed.GPU.#2.:    31658 H/s
+Speed.GPU.#3.:    32478 H/s
+Speed.GPU.#4.:    32421 H/s
+Speed.GPU.#5.:    32163 H/s
+Speed.GPU.#6.:    33207 H/s
+Speed.GPU.#7.:    32361 H/s
+Speed.GPU.#8.:    33199 H/s
+Speed.GPU.#*.:   259.9 kH/s
+
+Hashtype: phpass, MD5(Wordpress), MD5(phpBB3), MD5(Joomla)
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:  5123.3 kH/s
+Speed.GPU.#2.:  5114.9 kH/s
+Speed.GPU.#3.:  5125.4 kH/s
+Speed.GPU.#4.:  5110.3 kH/s
+Speed.GPU.#5.:  5112.5 kH/s
+Speed.GPU.#6.:  5192.2 kH/s
+Speed.GPU.#7.:  5092.1 kH/s
+Speed.GPU.#8.:  5197.6 kH/s
+Speed.GPU.#*.: 41068.4 kH/s
+
+Hashtype: SIP digest authentication (MD5)
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:  2158.2 MH/s
+Speed.GPU.#2.:  2127.7 MH/s
+Speed.GPU.#3.:  2158.5 MH/s
+Speed.GPU.#4.:  2163.2 MH/s
+Speed.GPU.#5.:  2131.8 MH/s
+Speed.GPU.#6.:  2206.0 MH/s
+Speed.GPU.#7.:  2146.8 MH/s
+Speed.GPU.#8.:  2173.6 MH/s
+Speed.GPU.#*.: 17265.7 MH/s
+
+Hashtype: SipHash
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 22867.3 MH/s
+Speed.GPU.#2.: 22921.6 MH/s
+Speed.GPU.#3.: 22944.6 MH/s
+Speed.GPU.#4.: 22834.9 MH/s
+Speed.GPU.#5.: 22903.8 MH/s
+Speed.GPU.#6.: 23193.4 MH/s
+Speed.GPU.#7.: 22723.2 MH/s
+Speed.GPU.#8.: 23186.8 MH/s
+Speed.GPU.#*.:   183.6 GH/s
+
+Hashtype: Joomla < 2.5.18
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 18592.9 MH/s
+Speed.GPU.#2.: 18623.4 MH/s
+Speed.GPU.#3.: 18650.6 MH/s
+Speed.GPU.#4.: 18744.5 MH/s
+Speed.GPU.#5.: 18595.7 MH/s
+Speed.GPU.#6.: 19054.2 MH/s
+Speed.GPU.#7.: 18523.6 MH/s
+Speed.GPU.#8.: 18881.9 MH/s
+Speed.GPU.#*.:   149.7 GH/s
+
+Hashtype: osCommerce, xt:Commerce
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 10435.3 MH/s
+Speed.GPU.#2.: 10485.6 MH/s
+Speed.GPU.#3.: 10513.3 MH/s
+Speed.GPU.#4.: 10378.8 MH/s
+Speed.GPU.#5.: 10426.3 MH/s
+Speed.GPU.#6.: 10695.0 MH/s
+Speed.GPU.#7.: 10427.1 MH/s
+Speed.GPU.#8.: 10573.2 MH/s
+Speed.GPU.#*.: 83934.8 MH/s
+
+Hashtype: PrestaShop
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  6468.4 MH/s
+Speed.GPU.#2.:  6452.4 MH/s
+Speed.GPU.#3.:  6471.3 MH/s
+Speed.GPU.#4.:  6431.5 MH/s
+Speed.GPU.#5.:  6486.0 MH/s
+Speed.GPU.#6.:  6615.0 MH/s
+Speed.GPU.#7.:  6443.0 MH/s
+Speed.GPU.#8.:  6573.7 MH/s
+Speed.GPU.#*.: 51941.4 MH/s
+
+Hashtype: IPB2+, MyBB1.2+
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2450.2 MH/s
+Speed.GPU.#2.:  2427.2 MH/s
+Speed.GPU.#3.:  2451.8 MH/s
+Speed.GPU.#4.:  2481.0 MH/s
+Speed.GPU.#5.:  2420.9 MH/s
+Speed.GPU.#6.:  2473.7 MH/s
+Speed.GPU.#7.:  2410.8 MH/s
+Speed.GPU.#8.:  2455.5 MH/s
+Speed.GPU.#*.: 19571.0 MH/s
+
+Hashtype: vBulletin < v3.8.5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  5286.5 MH/s
+Speed.GPU.#2.:  5293.4 MH/s
+Speed.GPU.#3.:  5284.4 MH/s
+Speed.GPU.#4.:  5248.9 MH/s
+Speed.GPU.#5.:  5239.7 MH/s
+Speed.GPU.#6.:  5354.6 MH/s
+Speed.GPU.#7.:  5217.9 MH/s
+Speed.GPU.#8.:  5348.1 MH/s
+Speed.GPU.#*.: 42273.5 MH/s
+
+Hashtype: PHPS
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  5217.2 MH/s
+Speed.GPU.#2.:  5229.0 MH/s
+Speed.GPU.#3.:  5298.9 MH/s
+Speed.GPU.#4.:  5245.2 MH/s
+Speed.GPU.#5.:  5267.2 MH/s
+Speed.GPU.#6.:  5398.2 MH/s
+Speed.GPU.#7.:  5216.0 MH/s
+Speed.GPU.#8.:  5397.7 MH/s
+Speed.GPU.#*.: 42269.3 MH/s
+
+Hashtype: vBulletin > v3.8.5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2393.4 MH/s
+Speed.GPU.#2.:  2397.6 MH/s
+Speed.GPU.#3.:  2395.0 MH/s
+Speed.GPU.#4.:  2431.2 MH/s
+Speed.GPU.#5.:  2376.9 MH/s
+Speed.GPU.#6.:  2428.2 MH/s
+Speed.GPU.#7.:  2354.8 MH/s
+Speed.GPU.#8.:  2411.9 MH/s
+Speed.GPU.#*.: 19189.0 MH/s
+
+Hashtype: SMF > v1.1
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  4445.4 MH/s
+Speed.GPU.#2.:  4380.0 MH/s
+Speed.GPU.#3.:  4425.6 MH/s
+Speed.GPU.#4.:  4418.7 MH/s
+Speed.GPU.#5.:  4391.0 MH/s
+Speed.GPU.#6.:  4481.5 MH/s
+Speed.GPU.#7.:  4345.0 MH/s
+Speed.GPU.#8.:  4441.1 MH/s
+Speed.GPU.#*.: 35328.2 MH/s
+```
+
+#### 0 Mhz Clock Offset (Nvidia default)
+```
+cudaHashcat v1.36 starting in benchmark-mode...
+
+Device #1: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #2: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #3: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #4: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #5: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #6: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #7: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+Device #8: GeForce GTX TITAN X, 12287MB, 1215Mhz, 24MCU
+
+Hashtype: MD4
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 35245.3 MH/s
+Speed.GPU.#2.: 34874.8 MH/s
+Speed.GPU.#3.: 35182.7 MH/s
+Speed.GPU.#4.: 35245.1 MH/s
+Speed.GPU.#5.: 34894.9 MH/s
+Speed.GPU.#6.: 35735.3 MH/s
+Speed.GPU.#7.: 34560.7 MH/s
+Speed.GPU.#8.: 35560.5 MH/s
+Speed.GPU.#*.:   281.3 GH/s
+
+Hashtype: MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 16928.3 MH/s
+Speed.GPU.#2.: 16721.2 MH/s
+Speed.GPU.#3.: 16946.3 MH/s
+Speed.GPU.#4.: 16917.5 MH/s
+Speed.GPU.#5.: 16719.9 MH/s
+Speed.GPU.#6.: 17157.3 MH/s
+Speed.GPU.#7.: 16593.4 MH/s
+Speed.GPU.#8.: 17070.3 MH/s
+Speed.GPU.#*.:   135.1 GH/s
+
+Hashtype: SHA1
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  5305.6 MH/s
+Speed.GPU.#2.:  5276.4 MH/s
+Speed.GPU.#3.:  5347.5 MH/s
+Speed.GPU.#4.:  5329.5 MH/s
+Speed.GPU.#5.:  5265.1 MH/s
+Speed.GPU.#6.:  5392.1 MH/s
+Speed.GPU.#7.:  5202.9 MH/s
+Speed.GPU.#8.:  5375.8 MH/s
+Speed.GPU.#*.: 42494.8 MH/s
+
+Hashtype: SHA256
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2116.3 MH/s
+Speed.GPU.#2.:  2098.4 MH/s
+Speed.GPU.#3.:  2117.4 MH/s
+Speed.GPU.#4.:  2111.7 MH/s
+Speed.GPU.#5.:  2092.7 MH/s
+Speed.GPU.#6.:  2141.6 MH/s
+Speed.GPU.#7.:  2073.6 MH/s
+Speed.GPU.#8.:  2125.9 MH/s
+Speed.GPU.#*.: 16877.6 MH/s
+
+Hashtype: SHA384
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   665.3 MH/s
+Speed.GPU.#2.:   657.7 MH/s
+Speed.GPU.#3.:   666.5 MH/s
+Speed.GPU.#4.:   662.5 MH/s
+Speed.GPU.#5.:   657.1 MH/s
+Speed.GPU.#6.:   671.0 MH/s
+Speed.GPU.#7.:   649.9 MH/s
+Speed.GPU.#8.:   667.8 MH/s
+Speed.GPU.#*.:  5297.9 MH/s
+
+Hashtype: SHA512
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   653.3 MH/s
+Speed.GPU.#2.:   646.3 MH/s
+Speed.GPU.#3.:   657.8 MH/s
+Speed.GPU.#4.:   656.1 MH/s
+Speed.GPU.#5.:   647.7 MH/s
+Speed.GPU.#6.:   662.2 MH/s
+Speed.GPU.#7.:   642.4 MH/s
+Speed.GPU.#8.:   662.0 MH/s
+Speed.GPU.#*.:  5227.8 MH/s
+
+Hashtype: SHA-3(Keccak)
+Workload: 128 loops, 256 accel
+
+Speed.GPU.#1.:   471.7 MH/s
+Speed.GPU.#2.:   471.8 MH/s
+Speed.GPU.#3.:   471.1 MH/s
+Speed.GPU.#4.:   472.8 MH/s
+Speed.GPU.#5.:   470.0 MH/s
+Speed.GPU.#6.:   481.3 MH/s
+Speed.GPU.#7.:   470.6 MH/s
+Speed.GPU.#8.:   479.6 MH/s
+Speed.GPU.#*.:  3788.8 MH/s
+
+Hashtype: RipeMD160
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  3557.5 MH/s
+Speed.GPU.#2.:  3506.1 MH/s
+Speed.GPU.#3.:  3564.9 MH/s
+Speed.GPU.#4.:  3556.6 MH/s
+Speed.GPU.#5.:  3509.6 MH/s
+Speed.GPU.#6.:  3599.1 MH/s
+Speed.GPU.#7.:  3486.9 MH/s
+Speed.GPU.#8.:  3580.8 MH/s
+Speed.GPU.#*.: 28361.5 MH/s
+
+Hashtype: Whirlpool
+Workload: 512 loops, 32 accel
+
+Speed.GPU.#1.:   140.7 MH/s
+Speed.GPU.#2.:   138.8 MH/s
+Speed.GPU.#3.:   140.4 MH/s
+Speed.GPU.#4.:   141.1 MH/s
+Speed.GPU.#5.:   138.8 MH/s
+Speed.GPU.#6.:   142.8 MH/s
+Speed.GPU.#7.:   137.9 MH/s
+Speed.GPU.#8.:   141.7 MH/s
+Speed.GPU.#*.:  1122.3 MH/s
+
+Hashtype: GOST R 34.11-94
+Workload: 512 loops, 64 accel
+
+Speed.GPU.#1.:   197.9 MH/s
+Speed.GPU.#2.:   195.7 MH/s
+Speed.GPU.#3.:   197.6 MH/s
+Speed.GPU.#4.:   197.9 MH/s
+Speed.GPU.#5.:   195.5 MH/s
+Speed.GPU.#6.:   200.6 MH/s
+Speed.GPU.#7.:   193.7 MH/s
+Speed.GPU.#8.:   199.5 MH/s
+Speed.GPU.#*.:  1578.3 MH/s
+
+Hashtype: SAP CODVN B (BCODE)
+Workload: 1024 loops, 64 accel
+
+Speed.GPU.#1.:  1268.5 MH/s
+Speed.GPU.#2.:  1256.2 MH/s
+Speed.GPU.#3.:  1270.2 MH/s
+Speed.GPU.#4.:  1272.0 MH/s
+Speed.GPU.#5.:  1254.0 MH/s
+Speed.GPU.#6.:  1288.7 MH/s
+Speed.GPU.#7.:  1250.8 MH/s
+Speed.GPU.#8.:  1279.9 MH/s
+Speed.GPU.#*.: 10140.3 MH/s
+
+Hashtype: SAP CODVN F/G (PASSCODE)
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   624.8 MH/s
+Speed.GPU.#2.:   622.7 MH/s
+Speed.GPU.#3.:   624.4 MH/s
+Speed.GPU.#4.:   626.2 MH/s
+Speed.GPU.#5.:   623.0 MH/s
+Speed.GPU.#6.:   631.9 MH/s
+Speed.GPU.#7.:   622.9 MH/s
+Speed.GPU.#8.:   631.4 MH/s
+Speed.GPU.#*.:  5007.1 MH/s
+
+Hashtype: SAP CODVN H (PWDSALTEDHASH) iSSHA-1
+Workload: 1024 loops, 16 accel
+
+Speed.GPU.#1.:  4093.7 kH/s
+Speed.GPU.#2.:  4014.8 kH/s
+Speed.GPU.#3.:  4093.7 kH/s
+Speed.GPU.#4.:  4074.2 kH/s
+Speed.GPU.#5.:  4022.5 kH/s
+Speed.GPU.#6.:  4126.5 kH/s
+Speed.GPU.#7.:  4057.8 kH/s
+Speed.GPU.#8.:  4113.9 kH/s
+Speed.GPU.#*.: 32597.1 kH/s
+
+Hashtype: Lotus Notes/Domino 5
+Workload: 256 loops, 32 accel
+
+Speed.GPU.#1.:   177.5 MH/s
+Speed.GPU.#2.:   175.4 MH/s
+Speed.GPU.#3.:   177.4 MH/s
+Speed.GPU.#4.:   178.0 MH/s
+Speed.GPU.#5.:   175.3 MH/s
+Speed.GPU.#6.:   179.3 MH/s
+Speed.GPU.#7.:   176.5 MH/s
+Speed.GPU.#8.:   178.9 MH/s
+Speed.GPU.#*.:  1418.4 MH/s
+
+Hashtype: Lotus Notes/Domino 6
+Workload: 256 loops, 32 accel
+
+Speed.GPU.#1.: 57621.6 kH/s
+Speed.GPU.#2.: 56932.0 kH/s
+Speed.GPU.#3.: 57598.6 kH/s
+Speed.GPU.#4.: 57726.4 kH/s
+Speed.GPU.#5.: 57000.2 kH/s
+Speed.GPU.#6.: 58298.3 kH/s
+Speed.GPU.#7.: 56454.2 kH/s
+Speed.GPU.#8.: 58081.5 kH/s
+Speed.GPU.#*.:   459.7 MH/s
+
+Hashtype: Lotus Notes/Domino 8
+Workload: 1024 loops, 64 accel
+
+Speed.GPU.#1.:   459.7 kH/s
+Speed.GPU.#2.:   453.7 kH/s
+Speed.GPU.#3.:   461.1 kH/s
+Speed.GPU.#4.:   459.3 kH/s
+Speed.GPU.#5.:   452.9 kH/s
+Speed.GPU.#6.:   466.0 kH/s
+Speed.GPU.#7.:   454.5 kH/s
+Speed.GPU.#8.:   464.1 kH/s
+Speed.GPU.#*.:  3671.3 kH/s
+
+Hashtype: SHA-1(Base64), nsldap, Netscape LDAP SHA
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  5329.8 MH/s
+Speed.GPU.#2.:  5265.0 MH/s
+Speed.GPU.#3.:  5326.2 MH/s
+Speed.GPU.#4.:  5310.2 MH/s
+Speed.GPU.#5.:  5237.2 MH/s
+Speed.GPU.#6.:  5356.6 MH/s
+Speed.GPU.#7.:  5248.3 MH/s
+Speed.GPU.#8.:  5357.4 MH/s
+Speed.GPU.#*.: 42430.8 MH/s
+
+Hashtype: SSHA-1(Base64), nsldaps, Netscape LDAP SSHA
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  5329.5 MH/s
+Speed.GPU.#2.:  5293.8 MH/s
+Speed.GPU.#3.:  5321.5 MH/s
+Speed.GPU.#4.:  5321.5 MH/s
+Speed.GPU.#5.:  5255.9 MH/s
+Speed.GPU.#6.:  5394.2 MH/s
+Speed.GPU.#7.:  5249.7 MH/s
+Speed.GPU.#8.:  5381.0 MH/s
+Speed.GPU.#*.: 42547.2 MH/s
+
+Hashtype: descrypt, DES(Unix), Traditional DES
+Workload: 128 loops, 64 accel
+
+Speed.GPU.#1.:   143.3 MH/s
+Speed.GPU.#2.:   141.4 MH/s
+Speed.GPU.#3.:   143.8 MH/s
+Speed.GPU.#4.:   143.1 MH/s
+Speed.GPU.#5.:   141.7 MH/s
+Speed.GPU.#6.:   145.3 MH/s
+Speed.GPU.#7.:   142.1 MH/s
+Speed.GPU.#8.:   144.7 MH/s
+Speed.GPU.#*.:  1145.4 MH/s
+
+Hashtype: md5crypt, MD5(Unix), FreeBSD MD5, Cisco-IOS MD5
+Workload: 1000 loops, 32 accel
+
+Speed.GPU.#1.:  7133.0 kH/s
+Speed.GPU.#2.:  7022.2 kH/s
+Speed.GPU.#3.:  7143.0 kH/s
+Speed.GPU.#4.:  7107.0 kH/s
+Speed.GPU.#5.:  7023.7 kH/s
+Speed.GPU.#6.:  7211.5 kH/s
+Speed.GPU.#7.:  7107.4 kH/s
+Speed.GPU.#8.:  7199.5 kH/s
+Speed.GPU.#*.: 56947.3 kH/s
+
+Hashtype: sha256crypt, SHA256(Unix)
+Workload: 1024 loops, 4 accel
+
+Speed.GPU.#1.:   312.3 kH/s
+Speed.GPU.#2.:   306.9 kH/s
+Speed.GPU.#3.:   312.3 kH/s
+Speed.GPU.#4.:   311.4 kH/s
+Speed.GPU.#5.:   308.4 kH/s
+Speed.GPU.#6.:   316.2 kH/s
+Speed.GPU.#7.:   309.7 kH/s
+Speed.GPU.#8.:   315.4 kH/s
+Speed.GPU.#*.:  2492.6 kH/s
+
+Hashtype: sha512crypt, SHA512(Unix)
+Workload: 1024 loops, 8 accel
+
+Speed.GPU.#1.:   110.6 kH/s
+Speed.GPU.#2.:   109.5 kH/s
+Speed.GPU.#3.:   111.8 kH/s
+Speed.GPU.#4.:   110.2 kH/s
+Speed.GPU.#5.:   108.4 kH/s
+Speed.GPU.#6.:   111.8 kH/s
+Speed.GPU.#7.:   110.3 kH/s
+Speed.GPU.#8.:   112.0 kH/s
+Speed.GPU.#*.:   884.6 kH/s
+
+Hashtype: bcrypt, Blowfish(OpenBSD)
+Workload: 32 loops, 2 accel
+
+Speed.GPU.#1.:    14498 H/s
+Speed.GPU.#2.:    14280 H/s
+Speed.GPU.#3.:    14492 H/s
+Speed.GPU.#4.:    14491 H/s
+Speed.GPU.#5.:    14293 H/s
+Speed.GPU.#6.:    14640 H/s
+Speed.GPU.#7.:    14351 H/s
+Speed.GPU.#8.:    14597 H/s
+Speed.GPU.#*.:   115.6 kH/s
+
+Hashtype: LM
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2135.0 MH/s
+Speed.GPU.#2.:  2106.4 MH/s
+Speed.GPU.#3.:  2140.9 MH/s
+Speed.GPU.#4.:  2131.0 MH/s
+Speed.GPU.#5.:  2110.6 MH/s
+Speed.GPU.#6.:  2161.0 MH/s
+Speed.GPU.#7.:  2095.1 MH/s
+Speed.GPU.#8.:  2152.5 MH/s
+Speed.GPU.#*.: 17032.5 MH/s
+
+Hashtype: NTLM
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 35275.4 MH/s
+Speed.GPU.#2.: 34794.2 MH/s
+Speed.GPU.#3.: 35216.1 MH/s
+Speed.GPU.#4.: 35221.1 MH/s
+Speed.GPU.#5.: 34754.7 MH/s
+Speed.GPU.#6.: 35750.3 MH/s
+Speed.GPU.#7.: 34930.8 MH/s
+Speed.GPU.#8.: 35567.6 MH/s
+Speed.GPU.#*.:   281.5 GH/s
+
+Hashtype: DCC, mscash
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  9462.7 MH/s
+Speed.GPU.#2.:  9322.1 MH/s
+Speed.GPU.#3.:  9482.3 MH/s
+Speed.GPU.#4.:  9436.6 MH/s
+Speed.GPU.#5.:  9302.6 MH/s
+Speed.GPU.#6.:  9568.3 MH/s
+Speed.GPU.#7.:  9356.6 MH/s
+Speed.GPU.#8.:  9523.1 MH/s
+Speed.GPU.#*.: 75454.3 MH/s
+
+Hashtype: NetNTLMv1-VANILLA / NetNTLMv1+ESS
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 14203.4 MH/s
+Speed.GPU.#2.: 14070.2 MH/s
+Speed.GPU.#3.: 14219.9 MH/s
+Speed.GPU.#4.: 14192.5 MH/s
+Speed.GPU.#5.: 14016.5 MH/s
+Speed.GPU.#6.: 14358.0 MH/s
+Speed.GPU.#7.: 14038.2 MH/s
+Speed.GPU.#8.: 14293.1 MH/s
+Speed.GPU.#*.:   113.4 GH/s
+
+Hashtype: NetNTLMv2
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  1102.1 MH/s
+Speed.GPU.#2.:  1087.9 MH/s
+Speed.GPU.#3.:  1103.9 MH/s
+Speed.GPU.#4.:  1088.0 MH/s
+Speed.GPU.#5.:  1081.7 MH/s
+Speed.GPU.#6.:  1111.6 MH/s
+Speed.GPU.#7.:  1088.8 MH/s
+Speed.GPU.#8.:  1109.1 MH/s
+Speed.GPU.#*.:  8773.0 MH/s
+
+Hashtype: Kerberos 5 AS-REQ Pre-Auth etype 23
+Workload: 256 loops, 32 accel
+
+Speed.GPU.#1.:   183.7 MH/s
+Speed.GPU.#2.:   182.0 MH/s
+Speed.GPU.#3.:   184.5 MH/s
+Speed.GPU.#4.:   184.3 MH/s
+Speed.GPU.#5.:   181.7 MH/s
+Speed.GPU.#6.:   185.9 MH/s
+Speed.GPU.#7.:   180.0 MH/s
+Speed.GPU.#8.:   185.9 MH/s
+Speed.GPU.#*.:  1468.1 MH/s
+
+Hashtype: EPiServer 6.x < v4
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  3858.2 MH/s
+Speed.GPU.#2.:  3818.1 MH/s
+Speed.GPU.#3.:  3867.2 MH/s
+Speed.GPU.#4.:  3864.3 MH/s
+Speed.GPU.#5.:  3806.8 MH/s
+Speed.GPU.#6.:  3910.0 MH/s
+Speed.GPU.#7.:  3808.8 MH/s
+Speed.GPU.#8.:  3893.8 MH/s
+Speed.GPU.#*.: 30827.1 MH/s
+
+Hashtype: EPiServer 6.x > v4
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  1929.3 MH/s
+Speed.GPU.#2.:  1906.7 MH/s
+Speed.GPU.#3.:  1934.7 MH/s
+Speed.GPU.#4.:  1927.7 MH/s
+Speed.GPU.#5.:  1909.8 MH/s
+Speed.GPU.#6.:  1955.1 MH/s
+Speed.GPU.#7.:  1894.5 MH/s
+Speed.GPU.#8.:  1945.1 MH/s
+Speed.GPU.#*.: 15402.9 MH/s
+
+Hashtype: MSSQL(2000)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  5436.6 MH/s
+Speed.GPU.#2.:  5387.2 MH/s
+Speed.GPU.#3.:  5451.0 MH/s
+Speed.GPU.#4.:  5424.2 MH/s
+Speed.GPU.#5.:  5383.0 MH/s
+Speed.GPU.#6.:  5507.1 MH/s
+Speed.GPU.#7.:  5378.4 MH/s
+Speed.GPU.#8.:  5484.1 MH/s
+Speed.GPU.#*.: 43451.6 MH/s
+
+Hashtype: MSSQL(2005)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  5440.5 MH/s
+Speed.GPU.#2.:  5358.8 MH/s
+Speed.GPU.#3.:  5446.2 MH/s
+Speed.GPU.#4.:  5457.7 MH/s
+Speed.GPU.#5.:  5356.7 MH/s
+Speed.GPU.#6.:  5529.1 MH/s
+Speed.GPU.#7.:  5317.7 MH/s
+Speed.GPU.#8.:  5490.1 MH/s
+Speed.GPU.#*.: 43396.9 MH/s
+
+Hashtype: MSSQL(2012)
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   663.4 MH/s
+Speed.GPU.#2.:   655.6 MH/s
+Speed.GPU.#3.:   667.2 MH/s
+Speed.GPU.#4.:   662.2 MH/s
+Speed.GPU.#5.:   655.4 MH/s
+Speed.GPU.#6.:   673.2 MH/s
+Speed.GPU.#7.:   659.6 MH/s
+Speed.GPU.#8.:   668.7 MH/s
+Speed.GPU.#*.:  5305.3 MH/s
+
+Hashtype: MySQL323
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.: 37473.5 MH/s
+Speed.GPU.#2.: 36988.0 MH/s
+Speed.GPU.#3.: 37629.6 MH/s
+Speed.GPU.#4.: 37473.8 MH/s
+Speed.GPU.#5.: 36955.4 MH/s
+Speed.GPU.#6.: 37988.0 MH/s
+Speed.GPU.#7.: 37143.2 MH/s
+Speed.GPU.#8.: 37807.0 MH/s
+Speed.GPU.#*.:   299.5 GH/s
+
+Hashtype: MySQL4.1/MySQL5
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  2500.8 MH/s
+Speed.GPU.#2.:  2456.0 MH/s
+Speed.GPU.#3.:  2504.9 MH/s
+Speed.GPU.#4.:  2499.0 MH/s
+Speed.GPU.#5.:  2461.5 MH/s
+Speed.GPU.#6.:  2531.0 MH/s
+Speed.GPU.#7.:  2465.7 MH/s
+Speed.GPU.#8.:  2520.1 MH/s
+Speed.GPU.#*.: 19938.8 MH/s
+
+Hashtype: Oracle 7-10g
+Workload: 512 loops, 64 accel
+
+Speed.GPU.#1.:   605.4 MH/s
+Speed.GPU.#2.:   598.3 MH/s
+Speed.GPU.#3.:   604.1 MH/s
+Speed.GPU.#4.:   608.3 MH/s
+Speed.GPU.#5.:   598.6 MH/s
+Speed.GPU.#6.:   613.6 MH/s
+Speed.GPU.#7.:   593.9 MH/s
+Speed.GPU.#8.:   608.6 MH/s
+Speed.GPU.#*.:  4830.8 MH/s
+
+Hashtype: Sybase ASE
+Workload: 512 loops, 32 accel
+
+Speed.GPU.#1.:   189.2 MH/s
+Speed.GPU.#2.:   186.9 MH/s
+Speed.GPU.#3.:   190.2 MH/s
+Speed.GPU.#4.:   190.1 MH/s
+Speed.GPU.#5.:   187.4 MH/s
+Speed.GPU.#6.:   192.9 MH/s
+Speed.GPU.#7.:   188.8 MH/s
+Speed.GPU.#8.:   192.7 MH/s
+Speed.GPU.#*.:  1518.1 MH/s
+
+Hashtype: Oracle 11g/12c
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  5300.4 MH/s
+Speed.GPU.#2.:  5263.0 MH/s
+Speed.GPU.#3.:  5350.7 MH/s
+Speed.GPU.#4.:  5303.6 MH/s
+Speed.GPU.#5.:  5222.2 MH/s
+Speed.GPU.#6.:  5380.9 MH/s
+Speed.GPU.#7.:  5245.7 MH/s
+Speed.GPU.#8.:  5345.1 MH/s
+Speed.GPU.#*.: 42411.5 MH/s
+
+Hashtype: PostgreSQL Challenge-Response Authentication (MD5)
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  4188.6 MH/s
+Speed.GPU.#2.:  4126.0 MH/s
+Speed.GPU.#3.:  4200.5 MH/s
+Speed.GPU.#4.:  4188.2 MH/s
+Speed.GPU.#5.:  4121.2 MH/s
+Speed.GPU.#6.:  4239.2 MH/s
+Speed.GPU.#7.:  4138.1 MH/s
+Speed.GPU.#8.:  4220.2 MH/s
+Speed.GPU.#*.: 33422.0 MH/s
+
+Hashtype: MySQL Challenge-Response Authentication (SHA1)
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  1565.6 MH/s
+Speed.GPU.#2.:  1549.9 MH/s
+Speed.GPU.#3.:  1574.4 MH/s
+Speed.GPU.#4.:  1564.2 MH/s
+Speed.GPU.#5.:  1543.2 MH/s
+Speed.GPU.#6.:  1585.9 MH/s
+Speed.GPU.#7.:  1550.8 MH/s
+Speed.GPU.#8.:  1578.8 MH/s
+Speed.GPU.#*.: 12512.8 MH/s
+
+Hashtype: OSX v10.4, v10.5, v10.6
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  3849.6 MH/s
+Speed.GPU.#2.:  3812.0 MH/s
+Speed.GPU.#3.:  3851.7 MH/s
+Speed.GPU.#4.:  3856.3 MH/s
+Speed.GPU.#5.:  3807.2 MH/s
+Speed.GPU.#6.:  3900.5 MH/s
+Speed.GPU.#7.:  3809.1 MH/s
+Speed.GPU.#8.:  3883.1 MH/s
+Speed.GPU.#*.: 30769.6 MH/s
+
+Hashtype: OSX v10.7
+Workload: 128 loops, 256 accel
+
+Speed.GPU.#1.:   656.2 MH/s
+Speed.GPU.#2.:   647.5 MH/s
+Speed.GPU.#3.:   654.5 MH/s
+Speed.GPU.#4.:   656.3 MH/s
+Speed.GPU.#5.:   645.6 MH/s
+Speed.GPU.#6.:   664.2 MH/s
+Speed.GPU.#7.:   652.9 MH/s
+Speed.GPU.#8.:   661.2 MH/s
+Speed.GPU.#*.:  5238.5 MH/s
+
+Hashtype: OSX v10.8+
+Workload: 1024 loops, 2 accel
+
+Speed.GPU.#1.:     7932 H/s
+Speed.GPU.#2.:     8069 H/s
+Speed.GPU.#3.:     7941 H/s
+Speed.GPU.#4.:     7892 H/s
+Speed.GPU.#5.:     7909 H/s
+Speed.GPU.#6.:     8293 H/s
+Speed.GPU.#7.:     7939 H/s
+Speed.GPU.#8.:     8216 H/s
+Speed.GPU.#*.:    64190 H/s
+
+Hashtype: Android PIN
+Workload: 1024 loops, 16 accel
+
+Speed.GPU.#1.:  4136.5 kH/s
+Speed.GPU.#2.:  4057.5 kH/s
+Speed.GPU.#3.:  4136.4 kH/s
+Speed.GPU.#4.:  4114.1 kH/s
+Speed.GPU.#5.:  4061.1 kH/s
+Speed.GPU.#6.:  4169.3 kH/s
+Speed.GPU.#7.:  4100.8 kH/s
+Speed.GPU.#8.:  4165.4 kH/s
+Speed.GPU.#*.: 32941.2 kH/s
+
+Hashtype: Android FDE <= 4.3
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   574.2 kH/s
+Speed.GPU.#2.:   561.2 kH/s
+Speed.GPU.#3.:   574.5 kH/s
+Speed.GPU.#4.:   570.3 kH/s
+Speed.GPU.#5.:   563.4 kH/s
+Speed.GPU.#6.:   578.7 kH/s
+Speed.GPU.#7.:   568.5 kH/s
+Speed.GPU.#8.:   577.2 kH/s
+Speed.GPU.#*.:  4568.0 kH/s
+
+Hashtype: scrypt
+Workload: 1 loops, 64 accel
+
+Speed.GPU.#1.:   130.6 kH/s
+Speed.GPU.#2.:   132.4 kH/s
+Speed.GPU.#3.:   120.9 kH/s
+Speed.GPU.#4.:   130.6 kH/s
+Speed.GPU.#5.:   136.1 kH/s
+Speed.GPU.#6.:   139.0 kH/s
+Speed.GPU.#7.:   132.7 kH/s
+Speed.GPU.#8.:   127.5 kH/s
+Speed.GPU.#*.:  1049.8 kH/s
+
+Hashtype: Cisco-PIX MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 10666.6 MH/s
+Speed.GPU.#2.: 10510.3 MH/s
+Speed.GPU.#3.: 10691.1 MH/s
+Speed.GPU.#4.: 10654.0 MH/s
+Speed.GPU.#5.: 10491.6 MH/s
+Speed.GPU.#6.: 10805.7 MH/s
+Speed.GPU.#7.: 10556.8 MH/s
+Speed.GPU.#8.: 10749.4 MH/s
+Speed.GPU.#*.: 85125.5 MH/s
+
+Hashtype: Cisco-ASA MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 10989.6 MH/s
+Speed.GPU.#2.: 11000.8 MH/s
+Speed.GPU.#3.: 11027.8 MH/s
+Speed.GPU.#4.: 11069.9 MH/s
+Speed.GPU.#5.: 10986.6 MH/s
+Speed.GPU.#6.: 11225.6 MH/s
+Speed.GPU.#7.: 10972.2 MH/s
+Speed.GPU.#8.: 11221.7 MH/s
+Speed.GPU.#*.: 88494.1 MH/s
+
+Hashtype: Cisco-IOS SHA256
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2113.7 MH/s
+Speed.GPU.#2.:  2082.5 MH/s
+Speed.GPU.#3.:  2119.6 MH/s
+Speed.GPU.#4.:  2113.1 MH/s
+Speed.GPU.#5.:  2080.7 MH/s
+Speed.GPU.#6.:  2140.6 MH/s
+Speed.GPU.#7.:  2089.2 MH/s
+Speed.GPU.#8.:  2130.8 MH/s
+Speed.GPU.#*.: 16870.0 MH/s
+
+Hashtype: Cisco $8$
+Workload: 1024 loops, 8 accel
+
+Speed.GPU.#1.:    46802 H/s
+Speed.GPU.#2.:    46087 H/s
+Speed.GPU.#3.:    46821 H/s
+Speed.GPU.#4.:    46734 H/s
+Speed.GPU.#5.:    46272 H/s
+Speed.GPU.#6.:    47245 H/s
+Speed.GPU.#7.:    46333 H/s
+Speed.GPU.#8.:    47246 H/s
+Speed.GPU.#*.:   373.5 kH/s
+
+Hashtype: Cisco $9$
+Workload: 1 loops, 4 accel
+
+Speed.GPU.#1.:     4392 H/s
+Speed.GPU.#2.:     4359 H/s
+Speed.GPU.#3.:     4366 H/s
+Speed.GPU.#4.:     4401 H/s
+Speed.GPU.#5.:     4320 H/s
+Speed.GPU.#6.:     4457 H/s
+Speed.GPU.#7.:     4344 H/s
+Speed.GPU.#8.:     4451 H/s
+Speed.GPU.#*.:    35090 H/s
+
+Hashtype: Juniper IVE
+Workload: 1000 loops, 32 accel
+
+Speed.GPU.#1.:  7111.6 kH/s
+Speed.GPU.#2.:  7019.0 kH/s
+Speed.GPU.#3.:  7139.3 kH/s
+Speed.GPU.#4.:  7086.3 kH/s
+Speed.GPU.#5.:  7036.8 kH/s
+Speed.GPU.#6.:  7214.8 kH/s
+Speed.GPU.#7.:  7103.1 kH/s
+Speed.GPU.#8.:  7198.6 kH/s
+Speed.GPU.#*.: 56909.6 kH/s
+
+Hashtype: Citrix NetScaler
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  4902.8 MH/s
+Speed.GPU.#2.:  4829.9 MH/s
+Speed.GPU.#3.:  4907.3 MH/s
+Speed.GPU.#4.:  4899.3 MH/s
+Speed.GPU.#5.:  4824.4 MH/s
+Speed.GPU.#6.:  4947.3 MH/s
+Speed.GPU.#7.:  4832.4 MH/s
+Speed.GPU.#8.:  4924.8 MH/s
+Speed.GPU.#*.: 39068.3 MH/s
+
+Hashtype: DNSSEC (NSEC3)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  2320.9 MH/s
+Speed.GPU.#2.:  2293.3 MH/s
+Speed.GPU.#3.:  2331.1 MH/s
+Speed.GPU.#4.:  2314.5 MH/s
+Speed.GPU.#5.:  2289.5 MH/s
+Speed.GPU.#6.:  2353.4 MH/s
+Speed.GPU.#7.:  2296.6 MH/s
+Speed.GPU.#8.:  2343.6 MH/s
+Speed.GPU.#*.: 18543.0 MH/s
+
+Hashtype: WPA/WPA2
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   283.3 kH/s
+Speed.GPU.#2.:   276.8 kH/s
+Speed.GPU.#3.:   282.4 kH/s
+Speed.GPU.#4.:   281.5 kH/s
+Speed.GPU.#5.:   277.3 kH/s
+Speed.GPU.#6.:   285.0 kH/s
+Speed.GPU.#7.:   279.5 kH/s
+Speed.GPU.#8.:   284.2 kH/s
+Speed.GPU.#*.:  2249.9 kH/s
+
+Hashtype: IKE-PSK MD5
+Workload: 512 loops, 128 accel
+
+Speed.GPU.#1.:  1200.4 MH/s
+Speed.GPU.#2.:  1190.6 MH/s
+Speed.GPU.#3.:  1210.3 MH/s
+Speed.GPU.#4.:  1197.4 MH/s
+Speed.GPU.#5.:  1188.6 MH/s
+Speed.GPU.#6.:  1222.1 MH/s
+Speed.GPU.#7.:  1195.2 MH/s
+Speed.GPU.#8.:  1218.0 MH/s
+Speed.GPU.#*.:  9622.7 MH/s
+
+Hashtype: IKE-PSK SHA1
+Workload: 512 loops, 128 accel
+
+Speed.GPU.#1.:   396.7 MH/s
+Speed.GPU.#2.:   391.0 MH/s
+Speed.GPU.#3.:   395.2 MH/s
+Speed.GPU.#4.:   398.9 MH/s
+Speed.GPU.#5.:   391.1 MH/s
+Speed.GPU.#6.:   401.7 MH/s
+Speed.GPU.#7.:   388.6 MH/s
+Speed.GPU.#8.:   398.8 MH/s
+Speed.GPU.#*.:  3162.1 MH/s
+
+Hashtype: Password Safe v2
+Workload: 1000 loops, 16 accel
+
+Speed.GPU.#1.:   207.4 kH/s
+Speed.GPU.#2.:   204.5 kH/s
+Speed.GPU.#3.:   207.2 kH/s
+Speed.GPU.#4.:   207.6 kH/s
+Speed.GPU.#5.:   203.8 kH/s
+Speed.GPU.#6.:   209.4 kH/s
+Speed.GPU.#7.:   203.2 kH/s
+Speed.GPU.#8.:   208.7 kH/s
+Speed.GPU.#*.:  1651.8 kH/s
+
+Hashtype: Password Safe v3
+Workload: 1024 loops, 16 accel
+
+Speed.GPU.#1.:   924.9 kH/s
+Speed.GPU.#2.:   906.8 kH/s
+Speed.GPU.#3.:   922.5 kH/s
+Speed.GPU.#4.:   923.4 kH/s
+Speed.GPU.#5.:   909.8 kH/s
+Speed.GPU.#6.:   931.8 kH/s
+Speed.GPU.#7.:   914.1 kH/s
+Speed.GPU.#8.:   930.2 kH/s
+Speed.GPU.#*.:  7363.5 kH/s
+
+Hashtype: 1Password, agilekeychain
+Workload: 1000 loops, 64 accel
+
+Speed.GPU.#1.:  2265.9 kH/s
+Speed.GPU.#2.:  2237.5 kH/s
+Speed.GPU.#3.:  2274.0 kH/s
+Speed.GPU.#4.:  2265.9 kH/s
+Speed.GPU.#5.:  2235.2 kH/s
+Speed.GPU.#6.:  2297.5 kH/s
+Speed.GPU.#7.:  2241.2 kH/s
+Speed.GPU.#8.:  2287.1 kH/s
+Speed.GPU.#*.: 18104.3 kH/s
+
+Hashtype: 1Password, cloudkeychain
+Workload: 1024 loops, 2 accel
+
+Speed.GPU.#1.:     6999 H/s
+Speed.GPU.#2.:     7034 H/s
+Speed.GPU.#3.:     7079 H/s
+Speed.GPU.#4.:     6907 H/s
+Speed.GPU.#5.:     6948 H/s
+Speed.GPU.#6.:     7112 H/s
+Speed.GPU.#7.:     7082 H/s
+Speed.GPU.#8.:     7167 H/s
+Speed.GPU.#*.:    56328 H/s
+
+Hashtype: AIX {ssha1}
+Workload: 64 loops, 128 accel
+
+Speed.GPU.#1.: 28241.5 kH/s
+Speed.GPU.#2.: 27972.9 kH/s
+Speed.GPU.#3.: 28356.1 kH/s
+Speed.GPU.#4.: 28241.5 kH/s
+Speed.GPU.#5.: 27925.6 kH/s
+Speed.GPU.#6.: 28614.5 kH/s
+Speed.GPU.#7.: 28034.5 kH/s
+Speed.GPU.#8.: 28476.3 kH/s
+Speed.GPU.#*.:   225.9 MH/s
+
+Hashtype: TrueCrypt 5.0+ PBKDF2-HMAC-RipeMD160 + AES
+Workload: 1024 loops, 64 accel
+
+Speed.GPU.#1.:   826.4 kH/s
+Speed.GPU.#2.:   819.5 kH/s
+Speed.GPU.#3.:   831.4 kH/s
+Speed.GPU.#4.:   826.2 kH/s
+Speed.GPU.#5.:   816.8 kH/s
+Speed.GPU.#6.:   840.4 kH/s
+Speed.GPU.#7.:   821.0 kH/s
+Speed.GPU.#8.:   836.2 kH/s
+Speed.GPU.#*.:  6618.0 kH/s
+
+Hashtype: TrueCrypt 5.0+ PBKDF2-HMAC-SHA512 + AES
+Workload: 1000 loops, 16 accel
+
+Speed.GPU.#1.:   290.1 kH/s
+Speed.GPU.#2.:   286.5 kH/s
+Speed.GPU.#3.:   291.5 kH/s
+Speed.GPU.#4.:   290.2 kH/s
+Speed.GPU.#5.:   288.4 kH/s
+Speed.GPU.#6.:   297.5 kH/s
+Speed.GPU.#7.:   292.9 kH/s
+Speed.GPU.#8.:   295.8 kH/s
+Speed.GPU.#*.:  2332.9 kH/s
+
+Hashtype: TrueCrypt 5.0+ PBKDF2-HMAC-Whirlpool + AES
+Workload: 1000 loops, 8 accel
+
+Speed.GPU.#1.:    30286 H/s
+Speed.GPU.#2.:    29928 H/s
+Speed.GPU.#3.:    30199 H/s
+Speed.GPU.#4.:    30320 H/s
+Speed.GPU.#5.:    29773 H/s
+Speed.GPU.#6.:    30704 H/s
+Speed.GPU.#7.:    30061 H/s
+Speed.GPU.#8.:    30488 H/s
+Speed.GPU.#*.:   241.8 kH/s
+
+Hashtype: TrueCrypt 5.0+ PBKDF2-HMAC-RipeMD160 + AES + boot-mode
+Workload: 1000 loops, 64 accel
+
+Speed.GPU.#1.:  1632.6 kH/s
+Speed.GPU.#2.:  1618.3 kH/s
+Speed.GPU.#3.:  1641.2 kH/s
+Speed.GPU.#4.:  1631.3 kH/s
+Speed.GPU.#5.:  1613.2 kH/s
+Speed.GPU.#6.:  1659.2 kH/s
+Speed.GPU.#7.:  1621.9 kH/s
+Speed.GPU.#8.:  1650.1 kH/s
+Speed.GPU.#*.: 13067.8 kH/s
+
+Hashtype: Office 2007
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:    94675 H/s
+Speed.GPU.#2.:    92537 H/s
+Speed.GPU.#3.:    94393 H/s
+Speed.GPU.#4.:    94022 H/s
+Speed.GPU.#5.:    92615 H/s
+Speed.GPU.#6.:    95204 H/s
+Speed.GPU.#7.:    93541 H/s
+Speed.GPU.#8.:    94948 H/s
+Speed.GPU.#*.:   751.9 kH/s
+
+Hashtype: Office 2010
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:    47403 H/s
+Speed.GPU.#2.:    46427 H/s
+Speed.GPU.#3.:    47404 H/s
+Speed.GPU.#4.:    47071 H/s
+Speed.GPU.#5.:    46474 H/s
+Speed.GPU.#6.:    47802 H/s
+Speed.GPU.#7.:    46945 H/s
+Speed.GPU.#8.:    47667 H/s
+Speed.GPU.#*.:   377.2 kH/s
+
+Hashtype: Office 2013
+Workload: 1024 loops, 4 accel
+
+Speed.GPU.#1.:     6808 H/s
+Speed.GPU.#2.:     6768 H/s
+Speed.GPU.#3.:     6843 H/s
+Speed.GPU.#4.:     6826 H/s
+Speed.GPU.#5.:     6796 H/s
+Speed.GPU.#6.:     6959 H/s
+Speed.GPU.#7.:     6765 H/s
+Speed.GPU.#8.:     6955 H/s
+Speed.GPU.#*.:    54719 H/s
+
+Hashtype: MS Office <= 2003 MD5 + RC4, oldoffice$0, oldoffice$1
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   168.5 MH/s
+Speed.GPU.#2.:   167.1 MH/s
+Speed.GPU.#3.:   169.1 MH/s
+Speed.GPU.#4.:   169.2 MH/s
+Speed.GPU.#5.:   166.2 MH/s
+Speed.GPU.#6.:   170.9 MH/s
+Speed.GPU.#7.:   166.9 MH/s
+Speed.GPU.#8.:   170.1 MH/s
+Speed.GPU.#*.:  1348.0 MH/s
+
+Hashtype: MS Office <= 2003 SHA1 + RC4, oldoffice$3, oldoffice$4
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   236.6 MH/s
+Speed.GPU.#2.:   233.9 MH/s
+Speed.GPU.#3.:   236.5 MH/s
+Speed.GPU.#4.:   237.3 MH/s
+Speed.GPU.#5.:   233.3 MH/s
+Speed.GPU.#6.:   239.6 MH/s
+Speed.GPU.#7.:   234.6 MH/s
+Speed.GPU.#8.:   238.9 MH/s
+Speed.GPU.#*.:  1890.8 MH/s
+
+Hashtype: PDF 1.1 - 1.3 (Acrobat 2 - 4)
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   258.1 MH/s
+Speed.GPU.#2.:   256.4 MH/s
+Speed.GPU.#3.:   259.7 MH/s
+Speed.GPU.#4.:   258.8 MH/s
+Speed.GPU.#5.:   256.3 MH/s
+Speed.GPU.#6.:   262.7 MH/s
+Speed.GPU.#7.:   256.6 MH/s
+Speed.GPU.#8.:   262.0 MH/s
+Speed.GPU.#*.:  2070.6 MH/s
+
+Hashtype: PDF 1.1 - 1.3 (Acrobat 2 - 4) + collider-mode #1
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:   291.7 MH/s
+Speed.GPU.#2.:   288.6 MH/s
+Speed.GPU.#3.:   291.5 MH/s
+Speed.GPU.#4.:   293.2 MH/s
+Speed.GPU.#5.:   287.5 MH/s
+Speed.GPU.#6.:   294.5 MH/s
+Speed.GPU.#7.:   285.5 MH/s
+Speed.GPU.#8.:   293.8 MH/s
+Speed.GPU.#*.:  2326.4 MH/s
+
+Hashtype: PDF 1.1 - 1.3 (Acrobat 2 - 4) + collider-mode #2
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:  2698.5 MH/s
+Speed.GPU.#2.:  2646.8 MH/s
+Speed.GPU.#3.:  2704.3 MH/s
+Speed.GPU.#4.:  2685.7 MH/s
+Speed.GPU.#5.:  2653.2 MH/s
+Speed.GPU.#6.:  2722.3 MH/s
+Speed.GPU.#7.:  2677.1 MH/s
+Speed.GPU.#8.:  2714.3 MH/s
+Speed.GPU.#*.: 21502.2 MH/s
+
+Hashtype: PDF 1.4 - 1.6 (Acrobat 5 - 8)
+Workload: 70 loops, 256 accel
+
+Speed.GPU.#1.: 12380.3 kH/s
+Speed.GPU.#2.: 12266.0 kH/s
+Speed.GPU.#3.: 12391.1 kH/s
+Speed.GPU.#4.: 12408.9 kH/s
+Speed.GPU.#5.: 12223.0 kH/s
+Speed.GPU.#6.: 12536.3 kH/s
+Speed.GPU.#7.: 12279.5 kH/s
+Speed.GPU.#8.: 12494.2 kH/s
+Speed.GPU.#*.: 98979.4 kH/s
+
+Hashtype: PDF 1.7 Level 3 (Acrobat 9)
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2115.3 MH/s
+Speed.GPU.#2.:  2081.3 MH/s
+Speed.GPU.#3.:  2117.7 MH/s
+Speed.GPU.#4.:  2113.3 MH/s
+Speed.GPU.#5.:  2080.0 MH/s
+Speed.GPU.#6.:  2134.8 MH/s
+Speed.GPU.#7.:  2087.2 MH/s
+Speed.GPU.#8.:  2125.5 MH/s
+Speed.GPU.#*.: 16855.1 MH/s
+
+Hashtype: PDF 1.7 Level 8 (Acrobat 10 - 11)
+Workload: 64 loops, 8 accel
+
+Speed.GPU.#1.:        0 H/s
+Speed.GPU.#2.:        0 H/s
+Speed.GPU.#3.:        0 H/s
+Speed.GPU.#4.:        0 H/s
+Speed.GPU.#5.:        0 H/s
+Speed.GPU.#6.:        0 H/s
+Speed.GPU.#7.:        0 H/s
+Speed.GPU.#8.:        0 H/s
+Speed.GPU.#*.:        0 H/s
+
+Hashtype: Drupal7
+Workload: 1024 loops, 8 accel
+
+Speed.GPU.#1.:    40832 H/s
+Speed.GPU.#2.:    40025 H/s
+Speed.GPU.#3.:    40851 H/s
+Speed.GPU.#4.:    40671 H/s
+Speed.GPU.#5.:    40159 H/s
+Speed.GPU.#6.:    41096 H/s
+Speed.GPU.#7.:    40588 H/s
+Speed.GPU.#8.:    41068 H/s
+Speed.GPU.#*.:   325.3 kH/s
+
+Hashtype: HMAC-MD5 (key = $pass)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  1671.2 MH/s
+Speed.GPU.#2.:  1656.7 MH/s
+Speed.GPU.#3.:  1671.8 MH/s
+Speed.GPU.#4.:  1680.9 MH/s
+Speed.GPU.#5.:  1655.6 MH/s
+Speed.GPU.#6.:  1700.5 MH/s
+Speed.GPU.#7.:  1643.0 MH/s
+Speed.GPU.#8.:  1690.8 MH/s
+Speed.GPU.#*.: 13370.4 MH/s
+
+Hashtype: HMAC-MD5 (key = $salt)
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  4701.1 MH/s
+Speed.GPU.#2.:  4561.1 MH/s
+Speed.GPU.#3.:  4691.6 MH/s
+Speed.GPU.#4.:  4611.4 MH/s
+Speed.GPU.#5.:  4650.9 MH/s
+Speed.GPU.#6.:  4647.2 MH/s
+Speed.GPU.#7.:  4566.6 MH/s
+Speed.GPU.#8.:  4695.5 MH/s
+Speed.GPU.#*.: 37125.4 MH/s
+
+Hashtype: HMAC-SHA1 (key = $pass)
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   365.2 MH/s
+Speed.GPU.#2.:   362.1 MH/s
+Speed.GPU.#3.:   364.8 MH/s
+Speed.GPU.#4.:   367.1 MH/s
+Speed.GPU.#5.:   362.4 MH/s
+Speed.GPU.#6.:   370.7 MH/s
+Speed.GPU.#7.:   357.7 MH/s
+Speed.GPU.#8.:   369.2 MH/s
+Speed.GPU.#*.:  2919.2 MH/s
+
+Hashtype: HMAC-SHA1 (key = $salt)
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:   570.3 MH/s
+Speed.GPU.#2.:   574.6 MH/s
+Speed.GPU.#3.:   571.7 MH/s
+Speed.GPU.#4.:   582.8 MH/s
+Speed.GPU.#5.:   574.2 MH/s
+Speed.GPU.#6.:   589.6 MH/s
+Speed.GPU.#7.:   569.3 MH/s
+Speed.GPU.#8.:   582.8 MH/s
+Speed.GPU.#*.:  4615.3 MH/s
+
+Hashtype: HMAC-SHA256 (key = $pass)
+Workload: 128 loops, 128 accel
+
+Speed.GPU.#1.:   398.8 MH/s
+Speed.GPU.#2.:   395.5 MH/s
+Speed.GPU.#3.:   401.0 MH/s
+Speed.GPU.#4.:   399.2 MH/s
+Speed.GPU.#5.:   395.8 MH/s
+Speed.GPU.#6.:   405.5 MH/s
+Speed.GPU.#7.:   392.9 MH/s
+Speed.GPU.#8.:   404.9 MH/s
+Speed.GPU.#*.:  3193.6 MH/s
+
+Hashtype: HMAC-SHA256 (key = $salt)
+Workload: 128 loops, 128 accel
+
+Speed.GPU.#1.:   905.0 MH/s
+Speed.GPU.#2.:   891.1 MH/s
+Speed.GPU.#3.:   905.9 MH/s
+Speed.GPU.#4.:   903.9 MH/s
+Speed.GPU.#5.:   889.8 MH/s
+Speed.GPU.#6.:   914.8 MH/s
+Speed.GPU.#7.:   894.9 MH/s
+Speed.GPU.#8.:   911.3 MH/s
+Speed.GPU.#*.:  7216.8 MH/s
+
+Hashtype: HMAC-SHA512 (key = $pass)
+Workload: 128 loops, 128 accel
+
+Speed.GPU.#1.: 88093.4 kH/s
+Speed.GPU.#2.: 87480.8 kH/s
+Speed.GPU.#3.: 87975.5 kH/s
+Speed.GPU.#4.: 88368.4 kH/s
+Speed.GPU.#5.: 87492.5 kH/s
+Speed.GPU.#6.: 89357.0 kH/s
+Speed.GPU.#7.: 86267.5 kH/s
+Speed.GPU.#8.: 89023.7 kH/s
+Speed.GPU.#*.:   704.1 MH/s
+
+Hashtype: HMAC-SHA512 (key = $salt)
+Workload: 128 loops, 128 accel
+
+Speed.GPU.#1.:   204.0 MH/s
+Speed.GPU.#2.:   202.2 MH/s
+Speed.GPU.#3.:   203.7 MH/s
+Speed.GPU.#4.:   205.5 MH/s
+Speed.GPU.#5.:   202.2 MH/s
+Speed.GPU.#6.:   207.8 MH/s
+Speed.GPU.#7.:   202.2 MH/s
+Speed.GPU.#8.:   206.7 MH/s
+Speed.GPU.#*.:  1634.3 MH/s
+
+Hashtype: IPMI2 RAKP HMAC-SHA1
+Workload: 256 loops, 256 accel
+
+Speed.GPU.#1.:  1100.8 MH/s
+Speed.GPU.#2.:  1088.5 MH/s
+Speed.GPU.#3.:  1106.5 MH/s
+Speed.GPU.#4.:  1098.5 MH/s
+Speed.GPU.#5.:  1086.7 MH/s
+Speed.GPU.#6.:  1117.0 MH/s
+Speed.GPU.#7.:  1090.9 MH/s
+Speed.GPU.#8.:  1112.5 MH/s
+Speed.GPU.#*.:  8801.5 MH/s
+
+Hashtype: Half MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 10455.9 MH/s
+Speed.GPU.#2.: 10306.8 MH/s
+Speed.GPU.#3.: 10466.4 MH/s
+Speed.GPU.#4.: 10446.5 MH/s
+Speed.GPU.#5.: 10295.2 MH/s
+Speed.GPU.#6.: 10563.3 MH/s
+Speed.GPU.#7.: 10326.5 MH/s
+Speed.GPU.#8.: 10516.8 MH/s
+Speed.GPU.#*.: 83377.4 MH/s
+
+Hashtype: Double MD5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  4731.2 MH/s
+Speed.GPU.#2.:  4672.8 MH/s
+Speed.GPU.#3.:  4726.2 MH/s
+Speed.GPU.#4.:  4696.2 MH/s
+Speed.GPU.#5.:  4652.6 MH/s
+Speed.GPU.#6.:  4761.4 MH/s
+Speed.GPU.#7.:  4690.9 MH/s
+Speed.GPU.#8.:  4760.3 MH/s
+Speed.GPU.#*.: 37691.5 MH/s
+
+Hashtype: GRUB 2
+Workload: 1024 loops, 2 accel
+
+Speed.GPU.#1.:    28413 H/s
+Speed.GPU.#2.:    28030 H/s
+Speed.GPU.#3.:    28504 H/s
+Speed.GPU.#4.:    28114 H/s
+Speed.GPU.#5.:    28052 H/s
+Speed.GPU.#6.:    28713 H/s
+Speed.GPU.#7.:    28231 H/s
+Speed.GPU.#8.:    29044 H/s
+Speed.GPU.#*.:   227.1 kH/s
+
+Hashtype: phpass, MD5(Wordpress), MD5(phpBB3), MD5(Joomla)
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:  4601.2 kH/s
+Speed.GPU.#2.:  4551.4 kH/s
+Speed.GPU.#3.:  4629.9 kH/s
+Speed.GPU.#4.:  4609.1 kH/s
+Speed.GPU.#5.:  4546.2 kH/s
+Speed.GPU.#6.:  4666.9 kH/s
+Speed.GPU.#7.:  4570.3 kH/s
+Speed.GPU.#8.:  4638.1 kH/s
+Speed.GPU.#*.: 36813.1 kH/s
+
+Hashtype: SIP digest authentication (MD5)
+Workload: 1024 loops, 32 accel
+
+Speed.GPU.#1.:  1895.5 MH/s
+Speed.GPU.#2.:  1859.3 MH/s
+Speed.GPU.#3.:  1891.1 MH/s
+Speed.GPU.#4.:  1892.5 MH/s
+Speed.GPU.#5.:  1864.0 MH/s
+Speed.GPU.#6.:  1916.6 MH/s
+Speed.GPU.#7.:  1876.4 MH/s
+Speed.GPU.#8.:  1912.0 MH/s
+Speed.GPU.#*.: 15107.4 MH/s
+
+Hashtype: SipHash
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 20537.2 MH/s
+Speed.GPU.#2.: 20498.7 MH/s
+Speed.GPU.#3.: 20573.8 MH/s
+Speed.GPU.#4.: 20621.4 MH/s
+Speed.GPU.#5.: 20453.5 MH/s
+Speed.GPU.#6.: 20998.9 MH/s
+Speed.GPU.#7.: 20482.2 MH/s
+Speed.GPU.#8.: 20932.6 MH/s
+Speed.GPU.#*.:   165.1 GH/s
+
+Hashtype: Joomla < 2.5.18
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.: 16838.6 MH/s
+Speed.GPU.#2.: 16703.5 MH/s
+Speed.GPU.#3.: 16800.1 MH/s
+Speed.GPU.#4.: 16866.1 MH/s
+Speed.GPU.#5.: 16672.6 MH/s
+Speed.GPU.#6.: 17122.1 MH/s
+Speed.GPU.#7.: 16731.9 MH/s
+Speed.GPU.#8.: 17037.1 MH/s
+Speed.GPU.#*.:   134.8 GH/s
+
+Hashtype: osCommerce, xt:Commerce
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  9341.7 MH/s
+Speed.GPU.#2.:  9282.4 MH/s
+Speed.GPU.#3.:  9420.1 MH/s
+Speed.GPU.#4.:  9408.0 MH/s
+Speed.GPU.#5.:  9228.8 MH/s
+Speed.GPU.#6.:  9545.4 MH/s
+Speed.GPU.#7.:  9317.3 MH/s
+Speed.GPU.#8.:  9489.2 MH/s
+Speed.GPU.#*.: 75032.8 MH/s
+
+Hashtype: PrestaShop
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  5771.4 MH/s
+Speed.GPU.#2.:  5736.6 MH/s
+Speed.GPU.#3.:  5813.8 MH/s
+Speed.GPU.#4.:  5781.7 MH/s
+Speed.GPU.#5.:  5717.4 MH/s
+Speed.GPU.#6.:  5885.8 MH/s
+Speed.GPU.#7.:  5729.6 MH/s
+Speed.GPU.#8.:  5847.2 MH/s
+Speed.GPU.#*.: 46283.6 MH/s
+
+Hashtype: IPB2+, MyBB1.2+
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2140.7 MH/s
+Speed.GPU.#2.:  2113.6 MH/s
+Speed.GPU.#3.:  2133.9 MH/s
+Speed.GPU.#4.:  2154.2 MH/s
+Speed.GPU.#5.:  2111.3 MH/s
+Speed.GPU.#6.:  2168.9 MH/s
+Speed.GPU.#7.:  2099.2 MH/s
+Speed.GPU.#8.:  2155.8 MH/s
+Speed.GPU.#*.: 17077.6 MH/s
+
+Hashtype: vBulletin < v3.8.5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  4705.4 MH/s
+Speed.GPU.#2.:  4633.9 MH/s
+Speed.GPU.#3.:  4728.1 MH/s
+Speed.GPU.#4.:  4698.5 MH/s
+Speed.GPU.#5.:  4684.2 MH/s
+Speed.GPU.#6.:  4771.0 MH/s
+Speed.GPU.#7.:  4662.9 MH/s
+Speed.GPU.#8.:  4732.0 MH/s
+Speed.GPU.#*.: 37615.9 MH/s
+
+Hashtype: PHPS
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  4721.4 MH/s
+Speed.GPU.#2.:  4663.8 MH/s
+Speed.GPU.#3.:  4743.6 MH/s
+Speed.GPU.#4.:  4712.7 MH/s
+Speed.GPU.#5.:  4654.9 MH/s
+Speed.GPU.#6.:  4816.8 MH/s
+Speed.GPU.#7.:  4661.5 MH/s
+Speed.GPU.#8.:  4781.0 MH/s
+Speed.GPU.#*.: 37755.6 MH/s
+
+Hashtype: vBulletin > v3.8.5
+Workload: 1024 loops, 256 accel
+
+Speed.GPU.#1.:  2098.4 MH/s
+Speed.GPU.#2.:  2073.1 MH/s
+Speed.GPU.#3.:  2093.1 MH/s
+Speed.GPU.#4.:  2104.8 MH/s
+Speed.GPU.#5.:  2070.6 MH/s
+Speed.GPU.#6.:  2127.7 MH/s
+Speed.GPU.#7.:  2057.8 MH/s
+Speed.GPU.#8.:  2114.5 MH/s
+Speed.GPU.#*.: 16739.9 MH/s
+
+Hashtype: SMF > v1.1
+Workload: 512 loops, 256 accel
+
+Speed.GPU.#1.:  3846.0 MH/s
+Speed.GPU.#2.:  3808.1 MH/s
+Speed.GPU.#3.:  3849.1 MH/s
+Speed.GPU.#4.:  3851.0 MH/s
+Speed.GPU.#5.:  3799.3 MH/s
+Speed.GPU.#6.:  3896.8 MH/s
+Speed.GPU.#7.:  3804.5 MH/s
+Speed.GPU.#8.:  3887.4 MH/s
+Speed.GPU.#*.: 30742.3 MH/s
+```
