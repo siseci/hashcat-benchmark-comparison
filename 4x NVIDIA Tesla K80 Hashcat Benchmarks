@@ -1,50 +1,5 @@
 hashcat (v4.1.0) starting in benchmark mode...
 
-[33mBenchmarking uses hand-optimized kernel code by default.[0m
-[33mYou can use it in your cracking session by setting the -O option.[0m
-[33mNote: Using optimized kernel code limits the maximum supported password length.[0m
-[33mTo disable the optimized kernel code in benchmark mode, use the -w option.[0m
-[33m[0m
-[33m* Device #1: This hardware has outdated CUDA compute capability (3.7).[0m
-[33m             For modern OpenCL performance, upgrade to hardware that supports[0m
-[33m             CUDA compute capability version 5.0 (Maxwell) or higher.[0m
-[33m* Device #2: This hardware has outdated CUDA compute capability (3.7).[0m
-[33m             For modern OpenCL performance, upgrade to hardware that supports[0m
-[33m             CUDA compute capability version 5.0 (Maxwell) or higher.[0m
-[33m* Device #3: This hardware has outdated CUDA compute capability (3.7).[0m
-[33m             For modern OpenCL performance, upgrade to hardware that supports[0m
-[33m             CUDA compute capability version 5.0 (Maxwell) or higher.[0m
-[33m* Device #4: This hardware has outdated CUDA compute capability (3.7).[0m
-[33m             For modern OpenCL performance, upgrade to hardware that supports[0m
-[33m             CUDA compute capability version 5.0 (Maxwell) or higher.[0m
-[33m* Device #5: This hardware has outdated CUDA compute capability (3.7).[0m
-[33m             For modern OpenCL performance, upgrade to hardware that supports[0m
-[33m             CUDA compute capability version 5.0 (Maxwell) or higher.[0m
-[33m* Device #6: This hardware has outdated CUDA compute capability (3.7).[0m
-[33m             For modern OpenCL performance, upgrade to hardware that supports[0m
-[33m             CUDA compute capability version 5.0 (Maxwell) or higher.[0m
-[33m* Device #7: This hardware has outdated CUDA compute capability (3.7).[0m
-[33m             For modern OpenCL performance, upgrade to hardware that supports[0m
-[33m             CUDA compute capability version 5.0 (Maxwell) or higher.[0m
-[33m* Device #8: This hardware has outdated CUDA compute capability (3.7).[0m
-[33m             For modern OpenCL performance, upgrade to hardware that supports[0m
-[33m             CUDA compute capability version 5.0 (Maxwell) or higher.[0m
-[31mnvmlDeviceGetFanSpeed(): Not Supported[0m
-
-[31mnvmlDeviceGetFanSpeed(): Not Supported[0m
-
-[31mnvmlDeviceGetFanSpeed(): Not Supported[0m
-
-[31mnvmlDeviceGetFanSpeed(): Not Supported[0m
-
-[31mnvmlDeviceGetFanSpeed(): Not Supported[0m
-
-[31mnvmlDeviceGetFanSpeed(): Not Supported[0m
-
-[31mnvmlDeviceGetFanSpeed(): Not Supported[0m
-
-[31mnvmlDeviceGetFanSpeed(): Not Supported[0m
-
 OpenCL Platform #1: NVIDIA Corporation
 ======================================
 * Device #1: Tesla K80, 2860/11441 MB allocatable, 13MCU
