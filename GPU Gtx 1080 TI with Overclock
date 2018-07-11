@@ -1,0 +1,628 @@
+GPU Gtx 1080 TI with Overclock
+
+https://gist.github.com/epixoip/973da7352f4cc005746c627527e4d073
+
+
+Benchmarks – +210 MHz OC
+
+hashcat (v3.40-49-g20057d8) starting in benchmark mode...
+
+OpenCL Platform #2: NVIDIA Corporation
+======================================
+* Device #1: Graphics Device, 2792/11171 MB allocatable, 28MCU
+
+Hashtype: MD4
+
+Speed.Dev.#1.....: 58630.5 MH/s (64.06ms)
+
+Hashtype: MD5
+
+Speed.Dev.#1.....: 33970.0 MH/s (55.28ms)
+
+Hashtype: Half MD5
+
+Speed.Dev.#1.....: 22856.1 MH/s (82.17ms)
+
+Hashtype: SHA1
+
+Speed.Dev.#1.....: 12640.6 MH/s (74.29ms)
+
+Hashtype: SHA256
+
+Speed.Dev.#1.....:  4909.0 MH/s (95.65ms)
+
+Hashtype: SHA384
+
+Speed.Dev.#1.....:  1591.7 MH/s (73.75ms)
+
+Hashtype: SHA512
+
+Speed.Dev.#1.....:  1664.6 MH/s (70.51ms)
+
+Hashtype: SHA-3(Keccak)
+
+Speed.Dev.#1.....:  1246.7 MH/s (94.16ms)
+
+Hashtype: SipHash
+
+Speed.Dev.#1.....: 43946.6 MH/s (85.48ms)
+
+Hashtype: Skip32
+
+Speed.Dev.#1.....:  6833.9 MH/s (4.88ms)
+
+Hashtype: RipeMD160
+
+Speed.Dev.#1.....:  7568.3 MH/s (62.03ms)
+
+Hashtype: Whirlpool
+
+Speed.Dev.#1.....:   400.1 MH/s (146.59ms)
+
+Hashtype: GOST R 34.11-94
+
+Speed.Dev.#1.....:   374.3 MH/s (78.41ms)
+
+Hashtype: GOST R 34.11-2012 (Streebog) 256-bit
+
+Speed.Dev.#1.....: 79197.9 kH/s (183.15ms)
+
+Hashtype: GOST R 34.11-2012 (Streebog) 512-bit
+
+Speed.Dev.#1.....: 79346.9 kH/s (182.80ms)
+
+Hashtype: DES (PT = $salt, key = $pass)
+
+Speed.Dev.#1.....: 27560.5 MH/s (68.09ms)
+
+Hashtype: 3DES (PT = $salt, key = $pass)
+
+Speed.Dev.#1.....:   767.1 MH/s (76.52ms)
+
+Hashtype: phpass, MD5(Wordpress), MD5(phpBB3), MD5(Joomla)
+
+Speed.Dev.#1.....: 10674.4 kH/s (84.47ms)
+
+Hashtype: scrypt
+
+Speed.Dev.#1.....:   911.1 kH/s (15.46ms)
+
+Hashtype: PBKDF2-HMAC-MD5
+
+Speed.Dev.#1.....: 11162.5 kH/s (52.67ms)
+
+Hashtype: PBKDF2-HMAC-SHA1
+
+Speed.Dev.#1.....:  5079.0 kH/s (88.59ms)
+
+Hashtype: PBKDF2-HMAC-SHA256
+
+Speed.Dev.#1.....:  1908.1 kH/s (51.55ms)
+
+Hashtype: PBKDF2-HMAC-SHA512
+
+Speed.Dev.#1.....:   681.5 kH/s (76.73ms)
+
+Hashtype: Skype
+
+Speed.Dev.#1.....: 19984.8 MH/s (93.98ms)
+
+Hashtype: WPA/WPA2
+
+Speed.Dev.#1.....:   625.0 kH/s (87.09ms)
+
+Hashtype: IKE-PSK MD5
+
+Speed.Dev.#1.....:  2891.9 MH/s (80.87ms)
+
+Hashtype: IKE-PSK SHA1
+
+Speed.Dev.#1.....:  1128.3 MH/s (51.95ms)
+
+Hashtype: NetNTLMv1-VANILLA / NetNTLMv1+ESS
+
+Speed.Dev.#1.....: 34027.8 MH/s (55.18ms)
+
+Hashtype: NetNTLMv2
+
+Speed.Dev.#1.....:  2664.1 MH/s (87.78ms)
+
+Hashtype: IPMI2 RAKP HMAC-SHA1
+
+Speed.Dev.#1.....:  2521.7 MH/s (92.74ms)
+
+Hashtype: Kerberos 5 AS-REQ Pre-Auth etype 23
+
+Speed.Dev.#1.....:   436.7 MH/s (67.20ms)
+
+Hashtype: Kerberos 5 TGS-REP etype 23
+
+Speed.Dev.#1.....:   455.2 MH/s (64.46ms)
+
+Hashtype: DNSSEC (NSEC3)
+
+Speed.Dev.#1.....:  5181.0 MH/s (90.63ms)
+
+Hashtype: PostgreSQL Challenge-Response Authentication (MD5)
+
+Speed.Dev.#1.....: 10317.9 MH/s (91.02ms)
+
+Hashtype: MySQL Challenge-Response Authentication (SHA1)
+
+Speed.Dev.#1.....:  3603.7 MH/s (64.89ms)
+
+Hashtype: SIP digest authentication (MD5)
+
+Speed.Dev.#1.....:  5453.3 MH/s (86.11ms)
+
+Hashtype: SMF > v1.1
+
+Speed.Dev.#1.....: 10449.8 MH/s (89.87ms)
+
+Hashtype: vBulletin < v3.8.5
+
+Speed.Dev.#1.....: 10534.2 MH/s (89.15ms)
+
+Hashtype: vBulletin > v3.8.5
+
+Speed.Dev.#1.....:  7399.3 MH/s (63.45ms)
+
+Hashtype: IPB2+, MyBB1.2+
+
+Speed.Dev.#1.....:  7655.5 MH/s (61.29ms)
+
+Hashtype: WBB3, Woltlab Burning Board 3
+
+Speed.Dev.#1.....:  1999.3 MH/s (58.71ms)
+
+Hashtype: OpenCart
+
+Speed.Dev.#1.....:  3185.6 MH/s (73.41ms)
+
+Hashtype: Joomla < 2.5.18
+
+Speed.Dev.#1.....: 33865.9 MH/s (55.45ms)
+
+Hashtype: PHPS
+
+Speed.Dev.#1.....: 10515.9 MH/s (89.31ms)
+
+Hashtype: Drupal7
+
+Speed.Dev.#1.....:    88577 H/s (80.85ms)
+
+Hashtype: osCommerce, xt:Commerce
+
+Speed.Dev.#1.....: 19900.5 MH/s (94.38ms)
+
+Hashtype: PrestaShop
+
+Speed.Dev.#1.....: 12935.2 MH/s (72.60ms)
+
+Hashtype: Django (SHA-1)
+
+Speed.Dev.#1.....: 10428.3 MH/s (90.06ms)
+
+Hashtype: Django (PBKDF2-SHA256)
+
+Speed.Dev.#1.....:    96288 H/s (60.80ms)
+
+Hashtype: Mediawiki B type
+
+Speed.Dev.#1.....:  9818.2 MH/s (95.65ms)
+
+Hashtype: Redmine Project Management Web App
+
+Speed.Dev.#1.....:  4320.7 MH/s (54.11ms)
+
+Hashtype: PunBB
+
+Speed.Dev.#1.....:  4324.1 MH/s (54.06ms)
+
+Hashtype: PostgreSQL
+
+Speed.Dev.#1.....: 33752.1 MH/s (55.64ms)
+
+Hashtype: MSSQL(2000)
+
+Speed.Dev.#1.....: 13105.4 MH/s (71.65ms)
+
+Hashtype: MSSQL(2005)
+
+Speed.Dev.#1.....: 13092.0 MH/s (71.73ms)
+
+Hashtype: MSSQL(2012)
+
+Speed.Dev.#1.....:  1592.6 MH/s (73.70ms)
+
+Hashtype: MySQL323
+
+Speed.Dev.#1.....: 74422.2 MH/s (50.46ms)
+
+Hashtype: MySQL4.1/MySQL5
+
+Speed.Dev.#1.....:  5816.1 MH/s (80.73ms)
+
+Hashtype: Oracle H: Type (Oracle 7+)
+
+Speed.Dev.#1.....:  1483.8 MH/s (79.11ms)
+
+Hashtype: Oracle S: Type (Oracle 11+)
+
+Speed.Dev.#1.....: 12576.8 MH/s (74.67ms)
+
+Hashtype: Oracle T: Type (Oracle 12+)
+
+Speed.Dev.#1.....:   167.5 kH/s (83.52ms)
+
+Hashtype: Sybase ASE
+
+Speed.Dev.#1.....:   409.4 MH/s (71.67ms)
+
+Hashtype: EPiServer 6.x < v4
+
+Speed.Dev.#1.....: 10421.2 MH/s (90.12ms)
+
+Hashtype: EPiServer 6.x > v4
+
+Speed.Dev.#1.....:  4313.1 MH/s (54.17ms)
+
+Hashtype: md5apr1, MD5(APR), Apache MD5
+
+Speed.Dev.#1.....: 15981.0 kH/s (56.01ms)
+
+Hashtype: ColdFusion 10+
+
+Speed.Dev.#1.....:  2775.2 MH/s (84.26ms)
+
+Hashtype: hMailServer
+
+Speed.Dev.#1.....:  4312.1 MH/s (54.21ms)
+
+Hashtype: SHA-1(Base64), nsldap, Netscape LDAP SHA
+
+Speed.Dev.#1.....: 12589.8 MH/s (74.59ms)
+
+Hashtype: SSHA-1(Base64), nsldaps, Netscape LDAP SSHA
+
+Speed.Dev.#1.....: 12587.7 MH/s (74.60ms)
+
+Hashtype: SSHA-256(Base64), LDAP {SSHA256}
+
+Speed.Dev.#1.....:  4887.6 MH/s (96.07ms)
+
+Hashtype: SSHA-512(Base64), LDAP {SSHA512}
+
+Speed.Dev.#1.....:  1665.4 MH/s (70.48ms)
+
+Hashtype: LM
+
+Speed.Dev.#1.....: 25263.2 MH/s (74.29ms)
+
+Hashtype: NTLM
+
+Speed.Dev.#1.....: 58355.5 MH/s (64.36ms)
+
+Hashtype: Domain Cached Credentials (DCC), MS Cache
+
+Speed.Dev.#1.....: 16991.7 MH/s (55.26ms)
+
+Hashtype: Domain Cached Credentials 2 (DCC2), MS Cache 2
+
+Speed.Dev.#1.....:   509.0 kH/s (89.98ms)
+
+Hashtype: MS-AzureSync PBKDF2-HMAC-SHA256
+
+Speed.Dev.#1.....: 16250.3 kH/s (76.30ms)
+
+Hashtype: descrypt, DES(Unix), Traditional DES
+
+Speed.Dev.#1.....:  1451.9 MH/s (80.79ms)
+
+Hashtype: BSDiCrypt, Extended DES
+
+Speed.Dev.#1.....:  2411.5 kH/s (62.89ms)
+
+Hashtype: md5crypt, MD5(Unix), FreeBSD MD5, Cisco-IOS MD5
+
+Speed.Dev.#1.....: 16033.6 kH/s (55.82ms)
+
+Hashtype: bcrypt, Blowfish(OpenBSD)
+
+Speed.Dev.#1.....:    22775 H/s (38.35ms)
+
+Hashtype: sha256crypt, SHA256(Unix)
+
+Speed.Dev.#1.....:   596.1 kH/s (76.24ms)
+
+Hashtype: sha512crypt, SHA512(Unix)
+
+Speed.Dev.#1.....:   229.5 kH/s (50.40ms)
+
+Hashtype: OSX v10.4, v10.5, v10.6
+
+Speed.Dev.#1.....: 10402.3 MH/s (90.24ms)
+
+Hashtype: OSX v10.7
+
+Speed.Dev.#1.....:  1474.4 MH/s (79.62ms)
+
+Hashtype: OSX v10.8+
+
+Speed.Dev.#1.....:    19473 H/s (85.87ms)
+
+Hashtype: AIX {smd5}
+
+Speed.Dev.#1.....: 15953.4 kH/s (56.10ms)
+
+Hashtype: AIX {ssha1}
+
+Speed.Dev.#1.....: 67761.9 kH/s (45.46ms)
+
+Hashtype: AIX {ssha256}
+
+Speed.Dev.#1.....: 26312.8 kH/s (64.08ms)
+
+Hashtype: AIX {ssha512}
+
+Speed.Dev.#1.....: 10139.7 kH/s (84.53ms)
+
+Hashtype: Cisco-PIX MD5
+
+Speed.Dev.#1.....: 24958.8 MH/s (75.25ms)
+
+Hashtype: Cisco-ASA MD5
+
+Speed.Dev.#1.....: 25478.6 MH/s (73.71ms)
+
+Hashtype: Cisco-IOS SHA256
+
+Speed.Dev.#1.....:  4887.4 MH/s (96.08ms)
+
+Hashtype: Cisco $8$
+
+Speed.Dev.#1.....:    96237 H/s (60.83ms)
+
+Hashtype: Cisco $9$
+
+Speed.Dev.#1.....:    26277 H/s (545.29ms)
+
+Hashtype: Juniper Netscreen/SSG (ScreenOS)
+
+Speed.Dev.#1.....: 19613.3 MH/s (95.73ms)
+
+Hashtype: Juniper IVE
+
+Speed.Dev.#1.....: 15977.2 kH/s (56.05ms)
+
+Hashtype: Android PIN
+
+Speed.Dev.#1.....:  8445.3 kH/s (53.58ms)
+
+Hashtype: Citrix NetScaler
+
+Speed.Dev.#1.....: 11459.4 MH/s (81.95ms)
+
+Hashtype: RACF
+
+Speed.Dev.#1.....:  3956.0 MH/s (59.34ms)
+
+Hashtype: GRUB 2
+
+Speed.Dev.#1.....:    68192 H/s (85.87ms)
+
+Hashtype: Radmin2
+
+Speed.Dev.#1.....: 12474.9 MH/s (75.28ms)
+
+Hashtype: SAP CODVN B (BCODE)
+
+Speed.Dev.#1.....:  2628.1 MH/s (88.99ms)
+
+Hashtype: SAP CODVN F/G (PASSCODE)
+
+Speed.Dev.#1.....:  1434.2 MH/s (81.85ms)
+
+Hashtype: SAP CODVN H (PWDSALTEDHASH) iSSHA-1
+
+Speed.Dev.#1.....:  9278.4 kH/s (64.86ms)
+
+Hashtype: Lotus Notes/Domino 5
+
+Speed.Dev.#1.....:   336.2 MH/s (87.30ms)
+
+Hashtype: Lotus Notes/Domino 6
+
+Speed.Dev.#1.....:   112.8 MH/s (128.53ms)
+
+Hashtype: Lotus Notes/Domino 8
+
+Speed.Dev.#1.....:  1031.8 kH/s (88.06ms)
+
+Hashtype: PeopleSoft
+
+Speed.Dev.#1.....: 13078.4 MH/s (71.80ms)
+
+Hashtype: PeopleSoft PS_TOKEN
+
+Speed.Dev.#1.....:  5008.8 MH/s (93.75ms)
+
+Hashtype: 7-Zip
+
+Speed.Dev.#1.....:    14677 H/s (60.84ms)
+
+Hashtype: WinZip
+
+Speed.Dev.#1.....:  1645.9 kH/s (59.50ms)
+
+Hashtype: RAR3-hp
+
+Speed.Dev.#1.....:    44682 H/s (80.11ms)
+
+Hashtype: RAR5
+
+Speed.Dev.#1.....:    58731 H/s (60.84ms)
+
+Hashtype: AxCrypt
+
+Speed.Dev.#1.....:   183.3 kH/s (256.05ms)
+
+Hashtype: AxCrypt in memory SHA1
+
+Speed.Dev.#1.....: 11972.9 MH/s (78.43ms)
+
+Hashtype: TrueCrypt PBKDF2-HMAC-RipeMD160 + XTS 512 bit
+
+Speed.Dev.#1.....:   427.0 kH/s (63.37ms)
+
+Hashtype: TrueCrypt PBKDF2-HMAC-SHA512 + XTS 512 bit
+
+Speed.Dev.#1.....:   637.8 kH/s (76.05ms)
+
+Hashtype: TrueCrypt PBKDF2-HMAC-Whirlpool + XTS 512 bit
+
+Speed.Dev.#1.....:    58135 H/s (243.50ms)
+
+Hashtype: TrueCrypt PBKDF2-HMAC-RipeMD160 + XTS 512 bit + boot-mode
+
+Speed.Dev.#1.....:   809.9 kH/s (58.10ms)
+
+Hashtype: VeraCrypt PBKDF2-HMAC-RipeMD160 + XTS 512 bit
+
+Speed.Dev.#1.....:     1375 H/s (64.83ms)
+
+Hashtype: VeraCrypt PBKDF2-HMAC-SHA512 + XTS 512 bit
+
+Speed.Dev.#1.....:     1347 H/s (85.18ms)
+
+Hashtype: VeraCrypt PBKDF2-HMAC-Whirlpool + XTS 512 bit
+
+Speed.Dev.#1.....:       91 H/s (248.90ms)
+
+Hashtype: VeraCrypt PBKDF2-HMAC-RipeMD160 + XTS 512 bit + boot-mode
+
+Speed.Dev.#1.....:     2749 H/s (64.85ms)
+
+Hashtype: VeraCrypt PBKDF2-HMAC-SHA256 + XTS 512 bit
+
+Speed.Dev.#1.....:     1770 H/s (65.30ms)
+
+Hashtype: VeraCrypt PBKDF2-HMAC-SHA256 + XTS 512 bit + boot-mode
+
+Speed.Dev.#1.....:     4471 H/s (65.32ms)
+
+Hashtype: Android FDE <= 4.3
+
+Speed.Dev.#1.....:  1264.5 kH/s (89.47ms)
+
+Hashtype: Android FDE (Samsung DEK)
+
+Speed.Dev.#1.....:   466.4 kH/s (61.09ms)
+
+Hashtype: eCryptfs
+
+Speed.Dev.#1.....:    20933 H/s (85.53ms)
+
+Hashtype: MS Office <= 2003 MD5 + RC4, oldoffice$0, oldoffice$1
+
+Speed.Dev.#1.....:   401.2 MH/s (73.15ms)
+
+Hashtype: MS Office <= 2003 MD5 + RC4, collision-mode #1
+
+Speed.Dev.#1.....:   501.6 MH/s (58.49ms)
+
+Hashtype: MS Office <= 2003 SHA1 + RC4, oldoffice$3, oldoffice$4
+
+Speed.Dev.#1.....:   470.3 MH/s (62.39ms)
+
+Hashtype: MS Office <= 2003 SHA1 + RC4, collision-mode #1
+
+Speed.Dev.#1.....:   528.2 MH/s (111.13ms)
+
+Hashtype: Office 2007
+
+Speed.Dev.#1.....:   205.7 kH/s (91.24ms)
+
+Hashtype: Office 2010
+
+Speed.Dev.#1.....:   102.7 kH/s (91.40ms)
+
+Hashtype: Office 2013
+
+Speed.Dev.#1.....:    13754 H/s (85.20ms)
+
+Hashtype: PDF 1.1 - 1.3 (Acrobat 2 - 4)
+
+Speed.Dev.#1.....:   524.7 MH/s (55.92ms)
+
+Hashtype: PDF 1.1 - 1.3 (Acrobat 2 - 4) + collider-mode #1
+
+Speed.Dev.#1.....:   587.7 MH/s (99.88ms)
+
+Hashtype: PDF 1.4 - 1.6 (Acrobat 5 - 8)
+
+Speed.Dev.#1.....: 25747.6 kH/s (33.87ms)
+
+Hashtype: PDF 1.7 Level 3 (Acrobat 9)
+
+Speed.Dev.#1.....:  4874.1 MH/s (96.33ms)
+
+Hashtype: PDF 1.7 Level 8 (Acrobat 10 - 11)
+
+Speed.Dev.#1.....:    52696 H/s (226.62ms)
+
+Hashtype: Password Safe v2
+
+Speed.Dev.#1.....:   485.3 kH/s (37.80ms)
+
+Hashtype: Password Safe v3
+
+Speed.Dev.#1.....:  1902.5 kH/s (54.58ms)
+
+Hashtype: Lastpass
+
+Speed.Dev.#1.....:  3656.9 kH/s (46.02ms)
+
+Hashtype: 1Password, agilekeychain
+
+Speed.Dev.#1.....:  5087.6 kH/s (66.46ms)
+
+Hashtype: 1Password, cloudkeychain
+
+Speed.Dev.#1.....:    17066 H/s (85.66ms)
+
+Hashtype: Bitcoin/Litecoin wallet.dat
+
+Speed.Dev.#1.....:     6868 H/s (85.34ms)
+
+Hashtype: Blockchain, My Wallet
+
+Speed.Dev.#1.....: 78561.0 kH/s (16.70ms)
+
+Hashtype: Keepass 1 (AES/Twofish) and Keepass 2 (AES)
+
+Speed.Dev.#1.....:   217.0 kH/s (179.52ms)
+
+Hashtype: ArubaOS
+
+Speed.Dev.#1.....: 10384.8 MH/s (90.43ms)
+
+Started: Sat Mar 18 00:24:13 2017
+Stopped: Sat Mar 18 00:36:01 2017
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
