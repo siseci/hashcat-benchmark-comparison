@@ -1,27 +1,7 @@
 source: https://gist.github.com/iam1980/808f696a14b0c42b26621a01f91a8b18
+
 ubuntu@ip-172-31-35-204:~/hashcat-4.0.0$ sudo ./hashcat64.bin -b
 hashcat (v4.0.0) starting in benchmark mode...
-
-Benchmarking uses hand-optimized kernel code by default.
-You can use it in your cracking session by setting the -O option.
-Note: Using optimized kernel code limits the maximum supported password length.
-To disable the optimized kernel code in benchmark mode, use the -w option.
-
-nvmlDeviceGetFanSpeed(): Not Supported
-
-nvmlDeviceGetFanSpeed(): Not Supported
-
-nvmlDeviceGetFanSpeed(): Not Supported
-
-nvmlDeviceGetFanSpeed(): Not Supported
-
-nvmlDeviceGetFanSpeed(): Not Supported
-
-nvmlDeviceGetFanSpeed(): Not Supported
-
-nvmlDeviceGetFanSpeed(): Not Supported
-
-nvmlDeviceGetFanSpeed(): Not Supported
 
 OpenCL Platform #1: NVIDIA Corporation
 ======================================
