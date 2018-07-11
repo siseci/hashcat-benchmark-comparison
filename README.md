@@ -1,0 +1,2 @@
+# hashcat-benchmarks
+Hashcat Benchmarks
