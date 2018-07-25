@@ -1,2 +1,2 @@
-# hashcat-benchmarks
-Hashcat Benchmarks
+# Hashcat Benchmarks Comparison 
+Hashcat Benchmarks Comparison
