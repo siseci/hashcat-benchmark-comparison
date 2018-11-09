@@ -1,0 +1,123 @@
+Source: https://gist.github.com/Chick3nman/d03c0d696699af2886c3404256801a9e
+Source: https://twitter.com/Chick3nman512/status/1042869372338024449
+Another Test Results: https://gist.github.com/epixoip/23068f4bc81db505115c43e7751522f2
+
+Nvidia Driver version 411.63
+
+hashcat (v4.2.1) starting in benchmark mode...
+
+OpenCL Platform #1: Intel(R) Corporation
+========================================
+* Device #1: Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz, skipped.
+
+OpenCL Platform #2: NVIDIA Corporation
+======================================
+* Device #2: GeForce RTX 2080, 2048/8192 MB allocatable, 46MCU
+
+Benchmark relevant options:
+===========================
+* --optimized-kernel-enable
+* --workload-profile=4
+
+Hashmode: 0 - MD5
+
+Speed.Dev.#2.....: 37350.7 MH/s (82.50ms) @ Accel:256 Loops:1024 Thr:256 Vec:1
+
+Hashmode: 100 - SHA1
+
+Speed.Dev.#2.....: 12207.6 MH/s (252.94ms) @ Accel:256 Loops:1024 Thr:256 Vec:1
+
+Hashmode: 1400 - SHA-256
+
+Speed.Dev.#2.....:  5519.1 MH/s (278.41ms) @ Accel:256 Loops:512 Thr:256 Vec:1
+
+Hashmode: 1700 - SHA-512
+
+Speed.Dev.#2.....:  1801.6 MH/s (427.03ms) @ Accel:256 Loops:256 Thr:256 Vec:1
+
+Hashmode: 2500 - WPA-EAPOL-PBKDF2 (Iterations: 4096)
+
+Speed.Dev.#2.....:   582.7 kH/s (321.37ms) @ Accel:256 Loops:256 Thr:256 Vec:1
+
+Hashmode: 1000 - NTLM
+
+Speed.Dev.#2.....: 54572.1 MH/s (55.97ms) @ Accel:256 Loops:1024 Thr:256 Vec:1
+
+Hashmode: 3000 - LM
+
+Speed.Dev.#2.....: 33149.8 MH/s (92.33ms) @ Accel:256 Loops:1024 Thr:256 Vec:1
+
+Hashmode: 5500 - NetNTLMv1 / NetNTLMv1+ESS
+
+Speed.Dev.#2.....: 31886.2 MH/s (96.14ms) @ Accel:256 Loops:1024 Thr:256 Vec:1
+
+Hashmode: 5600 - NetNTLMv2
+
+Speed.Dev.#2.....:  2793.3 MH/s (275.01ms) @ Accel:256 Loops:256 Thr:256 Vec:1
+
+Hashmode: 1500 - descrypt, DES (Unix), Traditional DES
+
+Speed.Dev.#2.....:  1310.9 MH/s (293.55ms) @ Accel:32 Loops:1024 Thr:256 Vec:1
+
+Hashmode: 500 - md5crypt, MD5 (Unix), Cisco-IOS $1$ (MD5) (Iterations: 1000)
+
+Speed.Dev.#2.....: 16385.2 kH/s (82.40ms) @ Accel:1024 Loops:1000 Thr:32 Vec:1
+
+Hashmode: 3200 - bcrypt $2*$, Blowfish (Unix) (Iterations: 32)
+
+Speed.Dev.#2.....:    19053 H/s (151.98ms) @ Accel:32 Loops:8 Thr:8 Vec:1
+
+Hashmode: 1800 - sha512crypt $6$, SHA512 (Unix) (Iterations: 5000)
+
+Speed.Dev.#2.....:   284.3 kH/s (267.32ms) @ Accel:1024 Loops:256 Thr:32 Vec:1
+
+Hashmode: 7500 - Kerberos 5 AS-REQ Pre-Auth etype 23
+
+Speed.Dev.#2.....:   457.2 MH/s (420.47ms) @ Accel:512 Loops:128 Thr:64 Vec:1
+
+Hashmode: 13100 - Kerberos 5 TGS-REP etype 23
+
+Speed.Dev.#2.....:   457.3 MH/s (420.49ms) @ Accel:512 Loops:128 Thr:64 Vec:1
+
+Hashmode: 15300 - DPAPI masterkey file v1 (Iterations: 23999)
+
+Speed.Dev.#2.....:    98314 H/s (324.48ms) @ Accel:256 Loops:256 Thr:256 Vec:1
+
+Hashmode: 15900 - DPAPI masterkey file v2 (Iterations: 7999)
+
+Speed.Dev.#2.....:    96782 H/s (246.76ms) @ Accel:512 Loops:256 Thr:32 Vec:1
+
+Hashmode: 7100 - macOS v10.8+ (PBKDF2-SHA512) (Iterations: 35000)
+
+Speed.Dev.#2.....:    21671 H/s (249.83ms) @ Accel:256 Loops:64 Thr:256 Vec:1
+
+Hashmode: 11600 - 7-Zip (Iterations: 524288)
+
+Speed.Dev.#2.....:    16563 H/s (353.44ms) @ Accel:256 Loops:1024 Thr:256 Vec:1
+
+Hashmode: 12500 - RAR3-hp (Iterations: 262144)
+
+Speed.Dev.#2.....:    47372 H/s (246.93ms) @ Accel:16 Loops:16384 Thr:256 Vec:1
+
+Hashmode: 13000 - RAR5 (Iterations: 32767)
+
+Speed.Dev.#2.....:    67307 H/s (346.34ms) @ Accel:256 Loops:256 Thr:256 Vec:1
+
+Hashmode: 6211 - TrueCrypt PBKDF2-HMAC-RIPEMD160 + XTS 512 bit (Iterations: 2000)
+
+Speed.Dev.#2.....:   442.2 kH/s (426.54ms) @ Accel:256 Loops:128 Thr:256 Vec:1
+
+Hashmode: 13400 - KeePass 1 (AES/Twofish) and KeePass 2 (AES) (Iterations: 6000)
+
+Speed.Dev.#2.....:   152.4 kH/s (841.58ms) @ Accel:1024 Loops:512 Thr:32 Vec:1
+
+Hashmode: 6800 - LastPass + LastPass sniffed (Iterations: 500)
+
+Speed.Dev.#2.....:  4147.3 kH/s (337.94ms) @ Accel:256 Loops:250 Thr:256 Vec:1
+
+Hashmode: 11300 - Bitcoin/Litecoin wallet.dat (Iterations: 199999)
+
+Speed.Dev.#2.....:     8187 H/s (467.88ms) @ Accel:256 Loops:256 Thr:256 Vec:1
+
+Started: Thu Sep 20 14:50:43 2018
+Stopped: Thu Sep 20 14:55:57 2018
